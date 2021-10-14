@@ -149,7 +149,8 @@ always @(posedge clk/* or negedge rst_n*/)
           Reduce_EncV_outready  <= 1'b0;
           Reduce_EncV_WAd       <= 0;
           Reduce_EncV_WData     <= 0;
-          $display("Reduce (OUT) [Mp]: %h", P0_PolyReduce_oPoly);
+          $display("Reduce (OUT) [Mp1]: %h", P0_PolyReduce_oPoly);
+          $display("Reduce (OUT) [Mp2]: %h", P1_PolyReduce_oPoly);
         end
       {Reduce_0,Push_0_Pop_1}: begin               
           Add_EncBpV_DecMp_RAd  <= 0;
@@ -157,7 +158,9 @@ always @(posedge clk/* or negedge rst_n*/)
           Reduce_EncV_WAd       <= 0;                 
           Reduce_EncV_WData     <= P0_PolyReduce_oPoly[o_BRAM_Length-1 : 0];
           // DEBUG:
+          // synthesis translate_off
           reduceV_debug <= P0_PolyReduce_oPoly[255:0];
+          // synthesis translate_on
         end
       {Push_0_Pop_1,Push_0_Pop_1}: begin
           Reduce_EncV_outready  <= 1'b1;

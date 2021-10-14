@@ -1,4 +1,3 @@
-
 `timescale 1 ns / 1 ps
 
   module Kyber512_CCAKEM_Masked_IP_v1_0 #
@@ -34,13 +33,16 @@
     // Users to add ports here
     input kyber_aclk,
     input kyber_aresetn,
-    input [15:0]  PRNG_out,
+    input [15:0]  PRNG_data,
     output        PRNG_enable,
     output trigger1,
     output trigger2,
+    // DEBUG:
+    // synthesis translate_off
     output debug_function_done,
     output [   CIPHERTEXT_SZ-1 : 0] o_ciphertext,
     output [SHARED_SECRET_SZ-1 : 0] o_shared_secret,
+    // synthesis translate_on
     // User ports ends
     // Do not modify the ports beyond this line
 
@@ -110,9 +112,12 @@
   wire [C_S00_AXI_DATA_WIDTH-1:0] w_control;
   wire [C_S00_AXI_DATA_WIDTH-1:0] w_status_reg;
 
+  // DEBUG:
   // Drivers
+  // synthesis translate_off
   assign o_ciphertext = w_ociphertext;
   assign o_shared_secret = w_oshared_secret;
+  // synthesis translate_on
   
 // Instantiation of Axi Bus Interface S00_AXI
   Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI # ( 
@@ -204,8 +209,11 @@
     .i_PK_SK_RAd(w_PK_SK_RAd),
     .o_rand_CT_RData(w_rand_CT_RData),
     .o_PK_SK_RData(w_PK_SK_RData),
-    .o_status_reg(w_status_reg),
+    .o_status_reg(w_status_reg)
+    // synthesis translate_off
+    ,
     .o_function_done(debug_function_done)
+    // synthesis translate_on
     // DEBUG
     // .state(state),
     // .i_message(w_message),
@@ -242,7 +250,7 @@
     .i_reset_n(w_control[31]),
     .i_enable(w_control[1]),
     .i_mux_enc_dec(w_control[0]),
-    .PRNG_out(PRNG_out),
+    .PRNG_data(PRNG_data),
     .PRNG_enable(PRNG_enable),
     // .i_random(w_random),
     // .i_public_key(w_public_key),

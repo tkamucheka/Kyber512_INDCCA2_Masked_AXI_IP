@@ -1,3 +1,24 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: University of Arkansas
+// Engineer: Tendayi Kamucheka (ftendayi@gmail.com)
+// 
+// Create Date: 10/05/2021 05:41:30 AM
+// Design Name: 
+// Module Name: A2B
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: Arithmetic to Boolean conversion
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments: 
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module A2B #(
   parameter COEFF_SZ = 16,
   parameter QBITS    = 12,

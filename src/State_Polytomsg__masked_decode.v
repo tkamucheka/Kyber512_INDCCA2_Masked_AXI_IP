@@ -57,8 +57,8 @@ reg d1;
 
 always @(posedge clk) begin
   d1 <= w_P3_ready;
-  t1         <= (w_P3_y1 >> 12) & 16'h01;
-  t2         <= (w_P3_y2 >> 12) & 16'h01;
+  t1 <= (w_P3_y1 >> 12) & 16'h01;
+  t2 <= (w_P3_y2 >> 12) & 16'h01;
 end
 
 always @(posedge clk) begin
@@ -84,7 +84,7 @@ State_Polytomsg__masked_decode_TransformPow2 P1 (
   .ce(w_P0_ready),
   .c1(w_P0_c1),
   .c2(w_P0_c2),
-  .PRNG_data(PRNG_data),
+  // .PRNG_data(PRNG_data),
   .data_valid(w_P1_ready),
   .y1(w_P1_y1),
   .y2(w_P1_y2)

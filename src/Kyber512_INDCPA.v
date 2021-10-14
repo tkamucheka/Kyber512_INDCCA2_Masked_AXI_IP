@@ -38,7 +38,7 @@ module Kyber512_INDCPA #(
   input clk,
   input rst_n,
   input mux_enc_dec,
-  input [15:0] PRNG_out,
+  input [15:0] PRNG_data,
   output       PRNG_enable,
   // INDCPA ENC
   input                       i_indcpa_enc_enable,
@@ -257,6 +257,7 @@ Kyber512_indcpa_DEC P1
 	.enable(i_indcpa_dec_enable),
 	.mux_enc_dec(mux_enc_dec),
   .i_CT(i_CT),
+  .PRNG_data(PRNG_data),
   // .i_SK(i_SK),
   .Decryption_Done(o_indcpa_dec_done),
   .o_Msg(o_Msg),
@@ -349,7 +350,7 @@ Kyber512_INDCPA_Shared P2
   .clk(clk),
   .rst_n(rst_n),
   .mux_enc_dec(mux_enc_dec), // enc0, dec1
-  .PRNG_out(PRNG_out),
+  .PRNG_data(PRNG_data),
   .PRNG_enable(PRNG_enable),
   // --------------------------------------
   // S0: UNPACK_PK_SK

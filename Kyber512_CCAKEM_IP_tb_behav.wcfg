@@ -11,1053 +11,1674 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1753393732767fs"></ZoomStartTime>
-      <ZoomEndTime time="2484999253447fs"></ZoomEndTime>
-      <Cursor1Time time="2363065000000fs"></Cursor1Time>
+      <ZoomStartTime time="912936866667fs"></ZoomStartTime>
+      <ZoomEndTime time="913220066668fs"></ZoomEndTime>
+      <Cursor1Time time="912975000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="280"></ValueColumnWidth>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
-   <wvobject type="divider" fp_name="divider267">
+   <WVObjectSize size="64" />
+   <wave_markers>
+      <marker label="" time="912975000000" />
+   </wave_markers>
+   <wvobject fp_name="divider267" type="divider">
       <obj_property name="label">DUT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/aclk" type="logic">
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/aclk">
       <obj_property name="ElementShortName">aclk</obj_property>
       <obj_property name="ObjectShortName">aclk</obj_property>
    </wvobject>
-   <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/arstn" type="logic">
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/arstn">
       <obj_property name="ElementShortName">arstn</obj_property>
       <obj_property name="ObjectShortName">arstn</obj_property>
    </wvobject>
-   <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/i" type="array">
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/i">
       <obj_property name="ElementShortName">i[31:0]</obj_property>
       <obj_property name="ObjectShortName">i[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="group268" type="group">
+   <wvobject type="group" fp_name="group268">
       <obj_property name="label">DUT_S00</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr">
          <obj_property name="ElementShortName">s00_write_addr[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_write_addr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_prot" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_prot">
          <obj_property name="ElementShortName">s00_write_prot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s00_write_prot[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr_valid">
          <obj_property name="ElementShortName">s00_write_addr_valid</obj_property>
          <obj_property name="ObjectShortName">s00_write_addr_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_addr_ready">
          <obj_property name="ElementShortName">s00_write_addr_ready</obj_property>
          <obj_property name="ObjectShortName">s00_write_addr_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data">
          <obj_property name="ElementShortName">s00_write_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_write_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_strb" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_strb">
          <obj_property name="ElementShortName">s00_write_strb[3:0]</obj_property>
          <obj_property name="ObjectShortName">s00_write_strb[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data_ready">
          <obj_property name="ElementShortName">s00_write_data_ready</obj_property>
          <obj_property name="ObjectShortName">s00_write_data_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_data_valid">
          <obj_property name="ElementShortName">s00_write_data_valid</obj_property>
          <obj_property name="ObjectShortName">s00_write_data_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp_ready">
          <obj_property name="ElementShortName">s00_write_resp_ready</obj_property>
          <obj_property name="ObjectShortName">s00_write_resp_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp">
          <obj_property name="ElementShortName">s00_write_resp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s00_write_resp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_write_resp_valid">
          <obj_property name="ElementShortName">s00_write_resp_valid</obj_property>
          <obj_property name="ObjectShortName">s00_write_resp_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr">
          <obj_property name="ElementShortName">s00_read_addr[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_read_addr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_prot" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_prot">
          <obj_property name="ElementShortName">s00_read_prot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s00_read_prot[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr_valid">
          <obj_property name="ElementShortName">s00_read_addr_valid</obj_property>
          <obj_property name="ObjectShortName">s00_read_addr_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_addr_ready">
          <obj_property name="ElementShortName">s00_read_addr_ready</obj_property>
          <obj_property name="ObjectShortName">s00_read_addr_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data_ready">
          <obj_property name="ElementShortName">s00_read_data_ready</obj_property>
          <obj_property name="ObjectShortName">s00_read_data_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data">
          <obj_property name="ElementShortName">s00_read_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_read_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_resp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_resp">
          <obj_property name="ElementShortName">s00_read_resp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s00_read_resp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s00_read_data_valid">
          <obj_property name="ElementShortName">s00_read_data_valid</obj_property>
          <obj_property name="ObjectShortName">s00_read_data_valid</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group269" type="group">
+   <wvobject type="group" fp_name="group269">
       <obj_property name="label">DUT_S01</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr">
          <obj_property name="ElementShortName">s01_write_addr[31:0]</obj_property>
          <obj_property name="ObjectShortName">s01_write_addr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_prot" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_prot">
          <obj_property name="ElementShortName">s01_write_prot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s01_write_prot[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr_valid">
          <obj_property name="ElementShortName">s01_write_addr_valid</obj_property>
          <obj_property name="ObjectShortName">s01_write_addr_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_addr_ready">
          <obj_property name="ElementShortName">s01_write_addr_ready</obj_property>
          <obj_property name="ObjectShortName">s01_write_addr_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data">
          <obj_property name="ElementShortName">s01_write_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">s01_write_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_strb" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_strb">
          <obj_property name="ElementShortName">s01_write_strb[3:0]</obj_property>
          <obj_property name="ObjectShortName">s01_write_strb[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data_valid">
          <obj_property name="ElementShortName">s01_write_data_valid</obj_property>
          <obj_property name="ObjectShortName">s01_write_data_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_data_ready">
          <obj_property name="ElementShortName">s01_write_data_ready</obj_property>
          <obj_property name="ObjectShortName">s01_write_data_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp_ready">
          <obj_property name="ElementShortName">s01_write_resp_ready</obj_property>
          <obj_property name="ObjectShortName">s01_write_resp_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp">
          <obj_property name="ElementShortName">s01_write_resp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s01_write_resp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_write_resp_valid">
          <obj_property name="ElementShortName">s01_write_resp_valid</obj_property>
          <obj_property name="ObjectShortName">s01_write_resp_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr">
          <obj_property name="ElementShortName">s01_read_addr[31:0]</obj_property>
          <obj_property name="ObjectShortName">s01_read_addr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_prot" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_prot">
          <obj_property name="ElementShortName">s01_read_prot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s01_read_prot[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr_valid">
          <obj_property name="ElementShortName">s01_read_addr_valid</obj_property>
          <obj_property name="ObjectShortName">s01_read_addr_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_addr_ready">
          <obj_property name="ElementShortName">s01_read_addr_ready</obj_property>
          <obj_property name="ObjectShortName">s01_read_addr_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data_ready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data_ready">
          <obj_property name="ElementShortName">s01_read_data_ready</obj_property>
          <obj_property name="ObjectShortName">s01_read_data_ready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_resp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_resp">
          <obj_property name="ElementShortName">s01_read_resp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s01_read_resp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data_valid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data_valid">
          <obj_property name="ElementShortName">s01_read_data_valid</obj_property>
          <obj_property name="ObjectShortName">s01_read_data_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/s01_read_data">
          <obj_property name="ElementShortName">s01_read_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">s01_read_data[31:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="divider" fp_name="divider45">
+   <wvobject fp_name="divider45" type="divider">
       <obj_property name="label">S00</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group44" type="group">
+   <wvobject type="group" fp_name="group44">
       <obj_property name="label">Kyber512_S00</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_encryption_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_encryption_done">
          <obj_property name="ElementShortName">i_encryption_done</obj_property>
          <obj_property name="ObjectShortName">i_encryption_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_decryption_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_decryption_done">
          <obj_property name="ElementShortName">i_decryption_done</obj_property>
          <obj_property name="ObjectShortName">i_decryption_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_cal_flag" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_cal_flag">
          <obj_property name="ElementShortName">i_cal_flag</obj_property>
          <obj_property name="ObjectShortName">i_cal_flag</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_cstate_flag" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_cstate_flag">
          <obj_property name="ElementShortName">i_cstate_flag[3:0]</obj_property>
          <obj_property name="ObjectShortName">i_cstate_flag[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_status_reg" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/i_status_reg">
          <obj_property name="ElementShortName">i_status_reg[31:0]</obj_property>
          <obj_property name="ObjectShortName">i_status_reg[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/o_control" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/o_control">
          <obj_property name="ElementShortName">o_control[31:0]</obj_property>
          <obj_property name="ObjectShortName">o_control[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ACLK" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ACLK">
          <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARESETN">
          <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWADDR" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWADDR">
          <obj_property name="ElementShortName">S_AXI_AWADDR[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWADDR[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWPROT" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWPROT">
          <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWVALID">
          <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_AWREADY">
          <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WDATA" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WDATA">
          <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WSTRB" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WSTRB">
          <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WVALID">
          <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_WREADY">
          <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BRESP" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BRESP">
          <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BVALID">
          <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_BREADY">
          <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARADDR" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARADDR">
          <obj_property name="ElementShortName">S_AXI_ARADDR[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARADDR[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARPROT" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARPROT">
          <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARVALID">
          <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_ARREADY">
          <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RDATA" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RDATA">
          <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RRESP" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RRESP">
          <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RVALID">
          <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/S_AXI_RREADY">
          <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_awaddr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_awaddr">
          <obj_property name="ElementShortName">axi_awaddr[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_awaddr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_awready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_awready">
          <obj_property name="ElementShortName">axi_awready</obj_property>
          <obj_property name="ObjectShortName">axi_awready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_wready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_wready">
          <obj_property name="ElementShortName">axi_wready</obj_property>
          <obj_property name="ObjectShortName">axi_wready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_bresp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_bresp">
          <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_bvalid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_bvalid">
          <obj_property name="ElementShortName">axi_bvalid</obj_property>
          <obj_property name="ObjectShortName">axi_bvalid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_araddr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_araddr">
          <obj_property name="ElementShortName">axi_araddr[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_arready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_arready">
          <obj_property name="ElementShortName">axi_arready</obj_property>
          <obj_property name="ObjectShortName">axi_arready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rdata" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rdata">
          <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rresp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rresp">
          <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rvalid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/axi_rvalid">
          <obj_property name="ElementShortName">axi_rvalid</obj_property>
          <obj_property name="ObjectShortName">axi_rvalid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg0" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg0">
          <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg1" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg1">
          <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg2" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg2">
          <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg3" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg3">
          <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg4" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg4">
          <obj_property name="ElementShortName">slv_reg4[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg4[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg5" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg5">
          <obj_property name="ElementShortName">slv_reg5[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg5[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg6" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg6">
          <obj_property name="ElementShortName">slv_reg6[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg6[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg7" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg7">
          <obj_property name="ElementShortName">slv_reg7[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg7[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg_rden" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg_rden">
          <obj_property name="ElementShortName">slv_reg_rden</obj_property>
          <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg_wren" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/slv_reg_wren">
          <obj_property name="ElementShortName">slv_reg_wren</obj_property>
          <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/reg_data_out" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/reg_data_out">
          <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
          <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/byte_index" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/byte_index">
          <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
          <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/aw_en" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/aw_en">
          <obj_property name="ElementShortName">aw_en</obj_property>
          <obj_property name="ObjectShortName">aw_en</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/status_reg" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/status_reg">
          <obj_property name="ElementShortName">status_reg[31:0]</obj_property>
          <obj_property name="ObjectShortName">status_reg[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH">
          <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
          <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH">
          <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
          <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/ADDR_LSB" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/ADDR_LSB">
          <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
          <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS">
          <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
          <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="divider" fp_name="divider101">
+   <wvobject fp_name="divider101" type="divider">
       <obj_property name="label">S01</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group102" type="group">
+   <wvobject type="group" fp_name="group102">
       <obj_property name="label">Kyber512_S01</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_ciphertext" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_ciphertext">
          <obj_property name="ElementShortName">i_ciphertext[5887:0]</obj_property>
          <obj_property name="ObjectShortName">i_ciphertext[5887:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_shared_secret" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_shared_secret">
          <obj_property name="ElementShortName">i_shared_secret[255:0]</obj_property>
          <obj_property name="ObjectShortName">i_shared_secret[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_control" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_control">
          <obj_property name="ElementShortName">i_control[31:0]</obj_property>
          <obj_property name="ObjectShortName">i_control[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_reset_n" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_reset_n">
          <obj_property name="ElementShortName">i_reset_n</obj_property>
          <obj_property name="ObjectShortName">i_reset_n</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_function_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_function_done">
          <obj_property name="ElementShortName">i_function_done</obj_property>
          <obj_property name="ObjectShortName">i_function_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_verify_fail" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_verify_fail">
          <obj_property name="ElementShortName">i_verify_fail</obj_property>
          <obj_property name="ObjectShortName">i_verify_fail</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_rand_CT_RAd" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_rand_CT_RAd">
          <obj_property name="ElementShortName">i_rand_CT_RAd[4:0]</obj_property>
          <obj_property name="ObjectShortName">i_rand_CT_RAd[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_PK_SK_RAd" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/i_PK_SK_RAd">
          <obj_property name="ElementShortName">i_PK_SK_RAd[5:0]</obj_property>
          <obj_property name="ObjectShortName">i_PK_SK_RAd[5:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_rand_CT_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_rand_CT_RData">
          <obj_property name="ElementShortName">o_rand_CT_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">o_rand_CT_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_PK_SK_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_PK_SK_RData">
          <obj_property name="ElementShortName">o_PK_SK_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">o_PK_SK_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_status_reg" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_status_reg">
          <obj_property name="ElementShortName">o_status_reg[31:0]</obj_property>
          <obj_property name="ObjectShortName">o_status_reg[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_function_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/o_function_done">
          <obj_property name="ElementShortName">o_function_done</obj_property>
          <obj_property name="ObjectShortName">o_function_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ACLK" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ACLK">
          <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARESETN" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARESETN">
          <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWADDR" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWADDR">
          <obj_property name="ElementShortName">S_AXI_AWADDR[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWADDR[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWPROT" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWPROT">
          <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWVALID">
          <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_AWREADY">
          <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WDATA" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WDATA">
          <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WSTRB" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WSTRB">
          <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WVALID">
          <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_WREADY">
          <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BRESP" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BRESP">
          <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BVALID">
          <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_BREADY">
          <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARADDR" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARADDR">
          <obj_property name="ElementShortName">S_AXI_ARADDR[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARADDR[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARPROT" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARPROT">
          <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARVALID">
          <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_ARREADY">
          <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RDATA" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RDATA">
          <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RRESP" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RRESP">
          <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RVALID" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RVALID">
          <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RREADY" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/S_AXI_RREADY">
          <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
          <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_awaddr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_awaddr">
          <obj_property name="ElementShortName">axi_awaddr[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_awaddr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_awready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_awready">
          <obj_property name="ElementShortName">axi_awready</obj_property>
          <obj_property name="ObjectShortName">axi_awready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_wready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_wready">
          <obj_property name="ElementShortName">axi_wready</obj_property>
          <obj_property name="ObjectShortName">axi_wready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_bresp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_bresp">
          <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_bvalid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_bvalid">
          <obj_property name="ElementShortName">axi_bvalid</obj_property>
          <obj_property name="ObjectShortName">axi_bvalid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_araddr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_araddr">
          <obj_property name="ElementShortName">axi_araddr[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_arready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_arready">
          <obj_property name="ElementShortName">axi_arready</obj_property>
          <obj_property name="ObjectShortName">axi_arready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rdata" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rdata">
          <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rresp" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rresp">
          <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rvalid" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/axi_rvalid">
          <obj_property name="ElementShortName">axi_rvalid</obj_property>
          <obj_property name="ObjectShortName">axi_rvalid</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg0" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg0">
          <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg1" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg1">
          <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg2" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg2">
          <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg3" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg3">
          <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg4" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg4">
          <obj_property name="ElementShortName">slv_reg4[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg4[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg5" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg5">
          <obj_property name="ElementShortName">slv_reg5[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg5[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg6" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg6">
          <obj_property name="ElementShortName">slv_reg6[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg6[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg7" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg7">
          <obj_property name="ElementShortName">slv_reg7[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg7[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg_rden" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg_rden">
          <obj_property name="ElementShortName">slv_reg_rden</obj_property>
          <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg_wren" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/slv_reg_wren">
          <obj_property name="ElementShortName">slv_reg_wren</obj_property>
          <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/reg_data_out" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/reg_data_out">
          <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
          <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/byte_index" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/byte_index">
          <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
          <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/aw_en" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/aw_en">
          <obj_property name="ElementShortName">aw_en</obj_property>
          <obj_property name="ObjectShortName">aw_en</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_RData">
          <obj_property name="ElementShortName">CT_RData[31:0]</obj_property>
          <obj_property name="ObjectShortName">CT_RData[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SS_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SS_RData">
          <obj_property name="ElementShortName">SS_RData[31:0]</obj_property>
          <obj_property name="ObjectShortName">SS_RData[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/ss" type="array">
-         <obj_property name="ElementShortName">ss[255:0]</obj_property>
-         <obj_property name="ObjectShortName">ss[255:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_outready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_outready">
          <obj_property name="ElementShortName">CT_outready</obj_property>
          <obj_property name="ObjectShortName">CT_outready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SS_outready" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SS_outready">
          <obj_property name="ElementShortName">SS_outready</obj_property>
          <obj_property name="ObjectShortName">SS_outready</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_WAd" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_WAd">
          <obj_property name="ElementShortName">CT_WAd[7:0]</obj_property>
          <obj_property name="ObjectShortName">CT_WAd[7:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_WData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CT_WData">
          <obj_property name="ElementShortName">CT_WData[255:0]</obj_property>
          <obj_property name="ObjectShortName">CT_WData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/w_rand_CT_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/w_rand_CT_RData">
          <obj_property name="ElementShortName">w_rand_CT_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">w_rand_CT_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/w_PK_SK_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/w_PK_SK_RData">
          <obj_property name="ElementShortName">w_PK_SK_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">w_PK_SK_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/cstate" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/cstate">
          <obj_property name="ElementShortName">cstate[2:0]</obj_property>
          <obj_property name="ObjectShortName">cstate[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/nstate" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/nstate">
          <obj_property name="ElementShortName">nstate[2:0]</obj_property>
          <obj_property name="ObjectShortName">nstate[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_K" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_K">
          <obj_property name="ElementShortName">KYBER_K[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_K[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_N" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_N">
          <obj_property name="ElementShortName">KYBER_N[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_N[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_Q" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_Q">
          <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/Byte_bits" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/Byte_bits">
          <obj_property name="ElementShortName">Byte_bits[31:0]</obj_property>
          <obj_property name="ObjectShortName">Byte_bits[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_SKBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_SKBytes">
          <obj_property name="ElementShortName">KYBER_512_SKBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_SKBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_PKBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_PKBytes">
          <obj_property name="ElementShortName">KYBER_512_PKBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_PKBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_CtBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_CtBytes">
          <obj_property name="ElementShortName">KYBER_512_CtBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_CtBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_SSBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_SSBytes">
          <obj_property name="ElementShortName">KYBER_512_SSBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_SSBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_RandBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/KYBER_512_RandBytes">
          <obj_property name="ElementShortName">KYBER_512_RandBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_RandBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/RAND_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/RAND_SZ">
          <obj_property name="ElementShortName">RAND_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">RAND_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CIPHERTEXT_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/CIPHERTEXT_SZ">
          <obj_property name="ElementShortName">CIPHERTEXT_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">CIPHERTEXT_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SECRET_KEY_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SECRET_KEY_SZ">
          <obj_property name="ElementShortName">SECRET_KEY_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">SECRET_KEY_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SHARED_SECRET_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/SHARED_SECRET_SZ">
          <obj_property name="ElementShortName">SHARED_SECRET_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">SHARED_SECRET_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/PUBLIC_KEY_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/PUBLIC_KEY_SZ">
          <obj_property name="ElementShortName">PUBLIC_KEY_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">PUBLIC_KEY_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/C_S_AXI_DATA_WIDTH" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/C_S_AXI_DATA_WIDTH">
          <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
          <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/C_S_AXI_ADDR_WIDTH" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/C_S_AXI_ADDR_WIDTH">
          <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
          <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/ADDR_LSB" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/ADDR_LSB">
          <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
          <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/OPT_MEM_ADDR_BITS" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/OPT_MEM_ADDR_BITS">
          <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
          <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/IDLE" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/IDLE">
          <obj_property name="ElementShortName">IDLE[2:0]</obj_property>
          <obj_property name="ObjectShortName">IDLE[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/WRITE_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/WRITE_ENC">
          <obj_property name="ElementShortName">WRITE_ENC[2:0]</obj_property>
          <obj_property name="ObjectShortName">WRITE_ENC[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/WRITE_DEC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI_inst/WRITE_DEC">
          <obj_property name="ElementShortName">WRITE_DEC[2:0]</obj_property>
          <obj_property name="ObjectShortName">WRITE_DEC[2:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="divider" fp_name="divider195">
+   <wvobject fp_name="divider195" type="divider">
       <obj_property name="label">Kyber512_CCAKEM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="group196" type="group">
+   <wvobject type="group" fp_name="group196">
       <obj_property name="label">Kyber512_CCAKEM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_clk" type="logic">
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_clk">
          <obj_property name="ElementShortName">i_clk</obj_property>
          <obj_property name="ObjectShortName">i_clk</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_reset_n" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_reset_n">
          <obj_property name="ElementShortName">i_reset_n</obj_property>
          <obj_property name="ObjectShortName">i_reset_n</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_enable" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_enable">
          <obj_property name="ElementShortName">i_enable[0:0]</obj_property>
          <obj_property name="ObjectShortName">i_enable[0:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_mux_enc_dec" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_mux_enc_dec">
          <obj_property name="ElementShortName">i_mux_enc_dec</obj_property>
          <obj_property name="ObjectShortName">i_mux_enc_dec</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/PRNG_out" type="array">
-         <obj_property name="ElementShortName">PRNG_out[15:0]</obj_property>
-         <obj_property name="ObjectShortName">PRNG_out[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/PRNG_enable" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/PRNG_enable">
          <obj_property name="ElementShortName">PRNG_enable</obj_property>
          <obj_property name="ObjectShortName">PRNG_enable</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_rand_CT_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_rand_CT_RData">
          <obj_property name="ElementShortName">i_rand_CT_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">i_rand_CT_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_PK_SK_RData" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_PK_SK_RData">
          <obj_property name="ElementShortName">i_PK_SK_RData[255:0]</obj_property>
          <obj_property name="ObjectShortName">i_PK_SK_RData[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_rand_CT_RAd" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_rand_CT_RAd">
          <obj_property name="ElementShortName">o_rand_CT_RAd[4:0]</obj_property>
          <obj_property name="ObjectShortName">o_rand_CT_RAd[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_PK_SK_RAd" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_PK_SK_RAd">
          <obj_property name="ElementShortName">o_PK_SK_RAd[5:0]</obj_property>
          <obj_property name="ObjectShortName">o_PK_SK_RAd[5:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_shared_secret" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_shared_secret">
          <obj_property name="ElementShortName">o_shared_secret[255:0]</obj_property>
          <obj_property name="ObjectShortName">o_shared_secret[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_ciphertext" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_ciphertext">
          <obj_property name="ElementShortName">o_ciphertext[5887:0]</obj_property>
          <obj_property name="ObjectShortName">o_ciphertext[5887:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_function_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_function_done">
          <obj_property name="ElementShortName">o_function_done</obj_property>
          <obj_property name="ObjectShortName">o_function_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_cal_flag" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_cal_flag">
          <obj_property name="ElementShortName">o_cal_flag</obj_property>
          <obj_property name="ObjectShortName">o_cal_flag</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_cstate_flag" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_cstate_flag">
          <obj_property name="ElementShortName">o_cstate_flag[3:0]</obj_property>
          <obj_property name="ObjectShortName">o_cstate_flag[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_verify_fail" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/o_verify_fail">
          <obj_property name="ElementShortName">o_verify_fail</obj_property>
          <obj_property name="ObjectShortName">o_verify_fail</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/trigger1" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/trigger1">
          <obj_property name="ElementShortName">trigger1</obj_property>
          <obj_property name="ObjectShortName">trigger1</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/trigger2" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/trigger2">
          <obj_property name="ElementShortName">trigger2</obj_property>
          <obj_property name="ObjectShortName">trigger2</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/w" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/w">
          <obj_property name="ElementShortName">w[31:0]</obj_property>
          <obj_property name="ObjectShortName">w[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/fetch" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/fetch">
          <obj_property name="ElementShortName">fetch[31:0]</obj_property>
          <obj_property name="ObjectShortName">fetch[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/start" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/start">
          <obj_property name="ElementShortName">start</obj_property>
          <obj_property name="ObjectShortName">start</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/pass" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/pass">
          <obj_property name="ElementShortName">pass</obj_property>
          <obj_property name="ObjectShortName">pass</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/mux_enc_dec_R" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/mux_enc_dec_R">
          <obj_property name="ElementShortName">mux_enc_dec_R</obj_property>
          <obj_property name="ObjectShortName">mux_enc_dec_R</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_enable" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_enable">
          <obj_property name="ElementShortName">T0_pre_post_indcpa_ENC_enable</obj_property>
          <obj_property name="ObjectShortName">T0_pre_post_indcpa_ENC_enable</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_mode" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_mode">
          <obj_property name="ElementShortName">T0_pre_post_indcpa_ENC_mode</obj_property>
          <obj_property name="ObjectShortName">T0_pre_post_indcpa_ENC_mode</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_pre_post_indcpa_ENC_done">
          <obj_property name="ElementShortName">T0_pre_post_indcpa_ENC_done</obj_property>
          <obj_property name="ObjectShortName">T0_pre_post_indcpa_ENC_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_ENC_enable" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_ENC_enable">
          <obj_property name="ElementShortName">T1_indcpa_ENC_enable</obj_property>
          <obj_property name="ObjectShortName">T1_indcpa_ENC_enable</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_DEC_enable" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_DEC_enable">
          <obj_property name="ElementShortName">T1_indcpa_DEC_enable</obj_property>
          <obj_property name="ObjectShortName">T1_indcpa_DEC_enable</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_ENC_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_ENC_done">
          <obj_property name="ElementShortName">T1_indcpa_ENC_done</obj_property>
          <obj_property name="ObjectShortName">T1_indcpa_ENC_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_DEC_done" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_indcpa_DEC_done">
          <obj_property name="ElementShortName">T1_indcpa_DEC_done</obj_property>
          <obj_property name="ObjectShortName">T1_indcpa_DEC_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FO_verify_fail" type="logic">
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FO_verify_fail">
          <obj_property name="ElementShortName">FO_verify_fail</obj_property>
          <obj_property name="ObjectShortName">FO_verify_fail</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_iBuf_Hi" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_iBuf_Hi">
          <obj_property name="ElementShortName">T0_iBuf_Hi[255:0]</obj_property>
          <obj_property name="ObjectShortName">T0_iBuf_Hi[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_i_post_Kr_Hi" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_i_post_Kr_Hi">
          <obj_property name="ElementShortName">T0_i_post_Kr_Hi[255:0]</obj_property>
          <obj_property name="ObjectShortName">T0_i_post_Kr_Hi[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_FO_buf" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_FO_buf">
          <obj_property name="ElementShortName">T0_FO_buf[511:0]</obj_property>
          <obj_property name="ObjectShortName">T0_FO_buf[511:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_oBuf_Hi" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_oBuf_Hi">
          <obj_property name="ElementShortName">T0_oBuf_Hi[255:0]</obj_property>
          <obj_property name="ObjectShortName">T0_oBuf_Hi[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_o_Kr" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T0_o_Kr">
          <obj_property name="ElementShortName">T0_o_Kr[511:0]</obj_property>
          <obj_property name="ObjectShortName">T0_o_Kr[511:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_public_key" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_public_key">
          <obj_property name="ElementShortName">i_public_key[6399:0]</obj_property>
          <obj_property name="ObjectShortName">i_public_key[6399:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_ciphertext" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_ciphertext">
          <obj_property name="ElementShortName">i_ciphertext[5887:0]</obj_property>
          <obj_property name="ObjectShortName">i_ciphertext[5887:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_secret_key" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/i_secret_key">
          <obj_property name="ElementShortName">i_secret_key[13055:0]</obj_property>
          <obj_property name="ObjectShortName">i_secret_key[13055:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_oCiphertext" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_oCiphertext">
          <obj_property name="ElementShortName">T1_oCiphertext[5887:0]</obj_property>
          <obj_property name="ObjectShortName">T1_oCiphertext[5887:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_DEC_omsg" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1_DEC_omsg">
          <obj_property name="ElementShortName">T1_DEC_omsg[255:0]</obj_property>
          <obj_property name="ObjectShortName">T1_DEC_omsg[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/cstate" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/cstate">
          <obj_property name="ElementShortName">cstate[3:0]</obj_property>
          <obj_property name="ObjectShortName">cstate[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/nstate" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/nstate">
          <obj_property name="ElementShortName">nstate[3:0]</obj_property>
          <obj_property name="ObjectShortName">nstate[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_K" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_K">
          <obj_property name="ElementShortName">KYBER_K[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_K[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_N" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_N">
          <obj_property name="ElementShortName">KYBER_N[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_N[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_Q" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_Q">
          <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Byte_bits" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Byte_bits">
          <obj_property name="ElementShortName">Byte_bits[31:0]</obj_property>
          <obj_property name="ObjectShortName">Byte_bits[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_SKBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_SKBytes">
          <obj_property name="ElementShortName">KYBER_512_SKBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_SKBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_PKBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_PKBytes">
          <obj_property name="ElementShortName">KYBER_512_PKBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_PKBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_CtBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_CtBytes">
          <obj_property name="ElementShortName">KYBER_512_CtBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_CtBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_SSBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_SSBytes">
          <obj_property name="ElementShortName">KYBER_512_SSBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_SSBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_RandBytes" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/KYBER_512_RandBytes">
          <obj_property name="ElementShortName">KYBER_512_RandBytes[31:0]</obj_property>
          <obj_property name="ObjectShortName">KYBER_512_RandBytes[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/RAND_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/RAND_SZ">
          <obj_property name="ElementShortName">RAND_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">RAND_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/CIPHERTEXT_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/CIPHERTEXT_SZ">
          <obj_property name="ElementShortName">CIPHERTEXT_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">CIPHERTEXT_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/SECRET_KEY_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/SECRET_KEY_SZ">
          <obj_property name="ElementShortName">SECRET_KEY_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">SECRET_KEY_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/SHARED_SECRET_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/SHARED_SECRET_SZ">
          <obj_property name="ElementShortName">SHARED_SECRET_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">SHARED_SECRET_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/PUBLIC_KEY_SZ" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/PUBLIC_KEY_SZ">
          <obj_property name="ElementShortName">PUBLIC_KEY_SZ[31:0]</obj_property>
          <obj_property name="ObjectShortName">PUBLIC_KEY_SZ[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/IDLE" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/IDLE">
          <obj_property name="ElementShortName">IDLE[3:0]</obj_property>
          <obj_property name="ObjectShortName">IDLE[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FetchMEM_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FetchMEM_ENC">
          <obj_property name="ElementShortName">FetchMEM_ENC[3:0]</obj_property>
          <obj_property name="ObjectShortName">FetchMEM_ENC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/ReadMEM_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/ReadMEM_ENC">
          <obj_property name="ElementShortName">ReadMEM_ENC[3:0]</obj_property>
          <obj_property name="ObjectShortName">ReadMEM_ENC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Pre_indcpa_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Pre_indcpa_ENC">
          <obj_property name="ElementShortName">Pre_indcpa_ENC[3:0]</obj_property>
          <obj_property name="ObjectShortName">Pre_indcpa_ENC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/indcpa_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/indcpa_ENC">
          <obj_property name="ElementShortName">indcpa_ENC[3:0]</obj_property>
          <obj_property name="ObjectShortName">indcpa_ENC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Post_indcpa_ENC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/Post_indcpa_ENC">
          <obj_property name="ElementShortName">Post_indcpa_ENC[3:0]</obj_property>
          <obj_property name="ObjectShortName">Post_indcpa_ENC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FetchMEM_DEC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/FetchMEM_DEC">
          <obj_property name="ElementShortName">FetchMEM_DEC[3:0]</obj_property>
          <obj_property name="ObjectShortName">FetchMEM_DEC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/ReadMEM_DEC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/ReadMEM_DEC">
          <obj_property name="ElementShortName">ReadMEM_DEC[3:0]</obj_property>
          <obj_property name="ObjectShortName">ReadMEM_DEC[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/indcpa_DEC" type="array">
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/indcpa_DEC">
          <obj_property name="ElementShortName">indcpa_DEC[3:0]</obj_property>
          <obj_property name="ObjectShortName">indcpa_DEC[3:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="divider" fp_name="divider872">
+   <wvobject fp_name="divider872" type="divider">
       <obj_property name="label">Testbench</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group293">
+      <obj_property name="label">Poly_tomsg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/m">
+         <obj_property name="ElementShortName">m[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/nstate">
+         <obj_property name="ElementShortName">nstate[1:0]</obj_property>
+         <obj_property name="ObjectShortName">nstate[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/cstate">
+         <obj_property name="ElementShortName">cstate[1:0]</obj_property>
+         <obj_property name="ObjectShortName">cstate[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Cal_oMsg2">
+         <obj_property name="ElementShortName">Cal_oMsg2</obj_property>
+         <obj_property name="ObjectShortName">Cal_oMsg2</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Cal_oMsg1">
+         <obj_property name="ElementShortName">Cal_oMsg1</obj_property>
+         <obj_property name="ObjectShortName">Cal_oMsg1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Cal_enable">
+         <obj_property name="ElementShortName">Cal_enable</obj_property>
+         <obj_property name="ObjectShortName">Cal_enable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/get">
+         <obj_property name="ElementShortName">get</obj_property>
+         <obj_property name="ObjectShortName">get</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/i">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/enable_counter">
+         <obj_property name="ElementShortName">enable_counter</obj_property>
+         <obj_property name="ObjectShortName">enable_counter</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/cycles">
+         <obj_property name="ElementShortName">cycles[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycles[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/oMsg">
+         <obj_property name="ElementShortName">oMsg[255:0]</obj_property>
+         <obj_property name="ObjectShortName">oMsg[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Reduce_DecMp_RAd">
+         <obj_property name="ElementShortName">Reduce_DecMp_RAd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Reduce_DecMp_RAd[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Function_done">
+         <obj_property name="ElementShortName">Function_done</obj_property>
+         <obj_property name="ObjectShortName">Function_done</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/PRNG_data">
+         <obj_property name="ElementShortName">PRNG_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">PRNG_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Reduce_DecMp2_RData">
+         <obj_property name="ElementShortName">Reduce_DecMp2_RData[11:0]</obj_property>
+         <obj_property name="ObjectShortName">Reduce_DecMp2_RData[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/Reduce_DecMp1_RData">
+         <obj_property name="ElementShortName">Reduce_DecMp1_RData[11:0]</obj_property>
+         <obj_property name="ObjectShortName">Reduce_DecMp1_RData[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/enable">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider294" type="divider">
+      <obj_property name="label">Mod Q</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group310">
+      <obj_property name="label">s0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/state">
+         <obj_property name="ElementShortName">state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/t">
+         <obj_property name="ElementShortName">t[15:0]</obj_property>
+         <obj_property name="ObjectShortName">t[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/c1">
+         <obj_property name="ElementShortName">c1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/c2">
+         <obj_property name="ElementShortName">c2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/y1">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/y2">
+         <obj_property name="ElementShortName">y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/ce">
+         <obj_property name="ElementShortName">ce</obj_property>
+         <obj_property name="ObjectShortName">ce</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group383">
+      <obj_property name="label">Barrett</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/ce">
+         <obj_property name="ElementShortName">ce</obj_property>
+         <obj_property name="ObjectShortName">ce</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/iCoeffs_a">
+         <obj_property name="ElementShortName">iCoeffs_a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">iCoeffs_a[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/oCoeffs">
+         <obj_property name="ElementShortName">oCoeffs[15:0]</obj_property>
+         <obj_property name="ObjectShortName">oCoeffs[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/reduce_done">
+         <obj_property name="ElementShortName">reduce_done</obj_property>
+         <obj_property name="ObjectShortName">reduce_done</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/a">
+         <obj_property name="ElementShortName">a[31:0]</obj_property>
+         <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/t1_32">
+         <obj_property name="ElementShortName">t1_32[31:0]</obj_property>
+         <obj_property name="ObjectShortName">t1_32[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/t2_32">
+         <obj_property name="ElementShortName">t2_32[31:0]</obj_property>
+         <obj_property name="ObjectShortName">t2_32[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/fifo_out">
+         <obj_property name="ElementShortName">fifo_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/state">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/KYBER_Q">
+         <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/K">
+         <obj_property name="ElementShortName">K[31:0]</obj_property>
+         <obj_property name="ObjectShortName">K[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P0/P1/V">
+         <obj_property name="ElementShortName">V[31:0]</obj_property>
+         <obj_property name="ObjectShortName">V[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider311" type="divider">
+      <obj_property name="label">TransformPow2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group312">
+      <obj_property name="label">s1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/ce">
+         <obj_property name="ElementShortName">ce</obj_property>
+         <obj_property name="ObjectShortName">ce</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/c1">
+         <obj_property name="ElementShortName">c1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/c2">
+         <obj_property name="ElementShortName">c2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/PRNG_data">
+         <obj_property name="ElementShortName">PRNG_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">PRNG_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/y1">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/y2">
+         <obj_property name="ElementShortName">y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/stage0_y1">
+         <obj_property name="ElementShortName">stage0_y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stage0_y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/stage0_y2">
+         <obj_property name="ElementShortName">stage0_y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stage0_y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/w_stage0_y1_out">
+         <obj_property name="ElementShortName">w_stage0_y1_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_stage0_y1_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/w_stage0_y2_out">
+         <obj_property name="ElementShortName">w_stage0_y2_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_stage0_y2_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/state">
+         <obj_property name="ElementShortName">state[5:0]</obj_property>
+         <obj_property name="ObjectShortName">state[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/w_stage1_ze1">
+         <obj_property name="ElementShortName">w_stage1_ze1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_stage1_ze1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/w_stage1_ze2">
+         <obj_property name="ElementShortName">w_stage1_ze2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_stage1_ze2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/w_stage1_data_valid">
+         <obj_property name="ElementShortName">w_stage1_data_valid</obj_property>
+         <obj_property name="ObjectShortName">w_stage1_data_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1">
+         <obj_property name="ElementShortName">k1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k2">
+         <obj_property name="ElementShortName">k2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1p">
+         <obj_property name="ElementShortName">k1p[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1p[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k2p">
+         <obj_property name="ElementShortName">k2p[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k2p[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/r">
+         <obj_property name="ElementShortName">r[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1Q">
+         <obj_property name="ElementShortName">k1Q[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1Q[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k2Q">
+         <obj_property name="ElementShortName">k2Q[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k2Q[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1pk2pQ">
+         <obj_property name="ElementShortName">k1pk2pQ[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1pk2pQ[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1pk2ppQ">
+         <obj_property name="ElementShortName">k1pk2ppQ[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1pk2ppQ[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1ppk2pQ">
+         <obj_property name="ElementShortName">k1ppk2pQ[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1ppk2pQ[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/k1ppk2ppQ">
+         <obj_property name="ElementShortName">k1ppk2ppQ[15:0]</obj_property>
+         <obj_property name="ObjectShortName">k1ppk2ppQ[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/KYBER_N">
+         <obj_property name="ElementShortName">KYBER_N[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KYBER_N[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/KYBER_Q">
+         <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/COEFF_SZ">
+         <obj_property name="ElementShortName">COEFF_SZ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COEFF_SZ[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/QBITS">
+         <obj_property name="ElementShortName">QBITS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/QBITS2">
+         <obj_property name="ElementShortName">QBITS2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/QM2">
+         <obj_property name="ElementShortName">QM2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QM2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P1/K">
+         <obj_property name="ElementShortName">K[31:0]</obj_property>
+         <obj_property name="ObjectShortName">K[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider349" type="divider">
+      <obj_property name="label">Mod 2^n</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group350">
+      <obj_property name="label">s2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/ce">
+         <obj_property name="ElementShortName">ce</obj_property>
+         <obj_property name="ObjectShortName">ce</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/c1">
+         <obj_property name="ElementShortName">c1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/c2">
+         <obj_property name="ElementShortName">c2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/y1">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/y2">
+         <obj_property name="ElementShortName">y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/KYBER_N">
+         <obj_property name="ElementShortName">KYBER_N[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KYBER_N[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/KYBER_Q">
+         <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/COEFF_SZ">
+         <obj_property name="ElementShortName">COEFF_SZ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COEFF_SZ[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/QBITS">
+         <obj_property name="ElementShortName">QBITS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/QBITS2">
+         <obj_property name="ElementShortName">QBITS2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/QM2">
+         <obj_property name="ElementShortName">QM2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QM2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P2/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider365" type="divider">
+      <obj_property name="label">A2B</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group366">
+      <obj_property name="label">s3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/ce">
+         <obj_property name="ElementShortName">ce</obj_property>
+         <obj_property name="ObjectShortName">ce</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/c1">
+         <obj_property name="ElementShortName">c1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/c2">
+         <obj_property name="ElementShortName">c2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">c2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/PRNG_data">
+         <obj_property name="ElementShortName">PRNG_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">PRNG_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/y1">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/y2">
+         <obj_property name="ElementShortName">y2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/t1">
+         <obj_property name="ElementShortName">t1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">t1[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/t2">
+         <obj_property name="ElementShortName">t2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">t2[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/state">
+         <obj_property name="ElementShortName">state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/COEFF_SZ">
+         <obj_property name="ElementShortName">COEFF_SZ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COEFF_SZ[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/QBITS">
+         <obj_property name="ElementShortName">QBITS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/QBITS2">
+         <obj_property name="ElementShortName">QBITS2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QBITS2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/QM2">
+         <obj_property name="ElementShortName">QM2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">QM2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P1/P7/P0/P3/K">
+         <obj_property name="ElementShortName">K[31:0]</obj_property>
+         <obj_property name="ObjectShortName">K[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider378" type="divider">
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/mux_enc_dec">
+      <obj_property name="ElementShortName">mux_enc_dec</obj_property>
+      <obj_property name="ObjectShortName">mux_enc_dec</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/ipackedpk">
+      <obj_property name="ElementShortName">ipackedpk[6399:0]</obj_property>
+      <obj_property name="ObjectShortName">ipackedpk[6399:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/ipackedsk">
+      <obj_property name="ElementShortName">ipackedsk[6143:0]</obj_property>
+      <obj_property name="ObjectShortName">ipackedsk[6143:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/PRNG_data">
+      <obj_property name="ElementShortName">PRNG_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PRNG_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/Function_Done">
+      <obj_property name="ElementShortName">Function_Done</obj_property>
+      <obj_property name="ObjectShortName">Function_Done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/PRNG_enable">
+      <obj_property name="ElementShortName">PRNG_enable</obj_property>
+      <obj_property name="ObjectShortName">PRNG_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/EncPk_DecSk_PolyVec_outready">
+      <obj_property name="ElementShortName">EncPk_DecSk_PolyVec_outready</obj_property>
+      <obj_property name="ObjectShortName">EncPk_DecSk_PolyVec_outready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/EncPk_DecSk_PolyVec_WAd">
+      <obj_property name="ElementShortName">EncPk_DecSk_PolyVec_WAd[5:0]</obj_property>
+      <obj_property name="ObjectShortName">EncPk_DecSk_PolyVec_WAd[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/EncPk_DecSk1_PolyVec_WData">
+      <obj_property name="ElementShortName">EncPk_DecSk1_PolyVec_WData[127:0]</obj_property>
+      <obj_property name="ObjectShortName">EncPk_DecSk1_PolyVec_WData[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/EncPk_DecSk2_PolyVec_WData">
+      <obj_property name="ElementShortName">EncPk_DecSk2_PolyVec_WData[127:0]</obj_property>
+      <obj_property name="ObjectShortName">EncPk_DecSk2_PolyVec_WData[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0_enable">
+      <obj_property name="ElementShortName">P0_enable</obj_property>
+      <obj_property name="ObjectShortName">P0_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0_done">
+      <obj_property name="ElementShortName">P0_done</obj_property>
+      <obj_property name="ObjectShortName">P0_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0_out_ready">
+      <obj_property name="ElementShortName">P0_out_ready</obj_property>
+      <obj_property name="ObjectShortName">P0_out_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0_o_poly_s1">
+      <obj_property name="ElementShortName">P0_o_poly_s1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">P0_o_poly_s1[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0_o_poly_s2">
+      <obj_property name="ElementShortName">P0_o_poly_s2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">P0_o_poly_s2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider481" type="divider">
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/enable">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/rand">
+      <obj_property name="ElementShortName">rand[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rand[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/s">
+      <obj_property name="ElementShortName">s[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/function_done">
+      <obj_property name="ElementShortName">function_done</obj_property>
+      <obj_property name="ObjectShortName">function_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/s1">
+      <obj_property name="ElementShortName">s1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s1[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/s2">
+      <obj_property name="ElementShortName">s2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s2[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/m">
+      <obj_property name="ElementShortName">m[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/a">
+      <obj_property name="ElementShortName">a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/reduce_enable">
+      <obj_property name="ElementShortName">reduce_enable</obj_property>
+      <obj_property name="ObjectShortName">reduce_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/y">
+      <obj_property name="ElementShortName">y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/cstate">
+      <obj_property name="ElementShortName">cstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/nstate">
+      <obj_property name="ElementShortName">nstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/w">
+      <obj_property name="ElementShortName">w[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/KYBER_Q">
+      <obj_property name="ElementShortName">KYBER_Q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">KYBER_Q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/COEFF_SZ">
+      <obj_property name="ElementShortName">COEFF_SZ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COEFF_SZ[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/IDLE">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/REDUCE">
+      <obj_property name="ElementShortName">REDUCE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">REDUCE[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Kyber512_CCAKEM_IP_tb/DUT/Kyber512_CCAKEM_Masked_inst/T1/P2/S0/P0/P2/PUSH">
+      <obj_property name="ElementShortName">PUSH[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PUSH[1:0]</obj_property>
    </wvobject>
 </wave_config>

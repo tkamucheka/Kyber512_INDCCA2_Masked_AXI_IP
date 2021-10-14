@@ -39,7 +39,8 @@ module Kyber512_indcpa_DEC #(
   input                           enable,
   input                           mux_enc_dec,	
   input   [CIPHERTEXT_SZ-1 : 0]   i_CT,
-  input   [SECRETKEY_SZ-1 : 0]    i_SK,
+  input   [15 : 0]                PRNG_data,
+  // input   [SECRETKEY_SZ-1 : 0]    i_SK,
   // input   [Coins_Size-1 : 0]      i_Coins,
   output  reg                     Decryption_Done,
   output  [MESSAGE_SZ-1 : 0]      o_Msg,
@@ -672,6 +673,7 @@ State_Polytomsg P7(
 .Reduce_DecMp_RAd(Reduce_DecMp_RAd),
 .Reduce_DecMp1_RData(Reduce_DecMp1_RData),
 .Reduce_DecMp2_RData(Reduce_DecMp2_RData),
+.PRNG_data(PRNG_data),
 .Function_done(P7_Poly_ToMsg_done),
 .oMsg(o_Msg)
 );

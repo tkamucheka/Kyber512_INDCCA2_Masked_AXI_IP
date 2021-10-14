@@ -22,16 +22,17 @@
 module NTT #(
   parameter KYBER_K = 2,
   parameter KYBER_N = 256,
-  parameter KYBER_Q = 3329
+  parameter KYBER_Q = 3329,
+  parameter COEFF_SZ = 16
 )(
 	input clk,		
 	input reset_n,
 	input enable,
-  input [15 : 0] Coef_RData,
+  input [COEFF_SZ-1 : 0] Coef_RData,
   output reg  [7 : 0] Coef_RAd,
   output reg  [0 : 0] Coef_WEN,
   output reg  [7 : 0] Coef_WAd,
-  output reg  [15 : 0] Coef_WData,
+  output reg  [COEFF_SZ-1 : 0] Coef_WData,
   output reg Poly_NTT_done
 );
 
@@ -46,11 +47,11 @@ reg         update, pass, P0_reduce_enable;
 
 wire        P0_reduce_done;
 wire  [7:0] len, j_plus_len;
-wire [15:0] zeta_k;
-wire [15:0] Montgomery_oCoeffs;
+wire [COEFF_SZ-1:0] zeta_k;
+wire [COEFF_SZ-1:0] Montgomery_oCoeffs;
 
-reg        [15:0] A_j; //, A_j_plus_len;
-reg signed [31:0] a;
+reg        [COEFF_SZ-1:0] A_j; //, A_j_plus_len;
+reg signed [      32-1:0] a;
 
 reg [2:0] cstate, nstate;
 localparam [2:0] IDLE      = 3'd0;
@@ -175,7 +176,7 @@ Zeta M0(
 .douta(zeta_k)
 );    
 
-Montgomery_reduce P0 (
+Montgomery_Reduce P0 (
 .clk(clk),
 .ce(P0_reduce_enable),
 .iCoeffs_a(a),

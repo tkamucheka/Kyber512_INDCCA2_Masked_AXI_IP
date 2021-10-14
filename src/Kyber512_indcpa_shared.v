@@ -38,7 +38,7 @@ module Kyber512_INDCPA_Shared #(
   input clk,
   input rst_n,
   input mux_enc_dec, // enc0, dec1
-  input [15:0] PRNG_out,
+  input [15:0] PRNG_data,
   output PRNG_enable,
   // S0: UNPACK_PK_SK
   input                     S0_Unpack_enable,
@@ -256,7 +256,7 @@ State_Unpack S0 (
 .mux_enc_dec(mux_enc_dec), // enc0, dec1
 .ipackedpk(S0_i_PK),
 .ipackedsk(S0_i_SK),
-.PRNG_out(PRNG_out),
+.PRNG_data(PRNG_data),
 .Function_Done(S0_Unpack_pk_sk_done),
 .PRNG_enable(PRNG_enable),
 .EncPk_DecSk_PolyVec_outready(S0_EncPk_DecSk_PolyVec_outready),

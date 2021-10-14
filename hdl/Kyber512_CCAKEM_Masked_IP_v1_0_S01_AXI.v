@@ -457,7 +457,7 @@
   // wire [ 7:0] BRAM_RAd;
   wire [31:0] CT_RData;
   wire [31:0] SS_RData;
-  reg [255:0] ss = 256'h5955e27b0a4bb2c1279fe11780b8a9d78f42e360faa6a94fdff417666569b91b;
+  // reg [255:0] ss = 256'h5955e27b0a4bb2c1279fe11780b8a9d78f42e360faa6a94fdff417666569b91b;
   
   assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
   always @(*)
@@ -592,7 +592,8 @@ endfunction
       SS_outready     <= 1'b0;
       CT_outready     <= 1'b0;
       CT_WAd          <= 1'b0;
-      o_function_done  <= 1'b0;
+      o_function_done <= 1'b0;
+      CT_WAd          <= 8'hx;
     end else begin
       case ({cstate,nstate})
         {IDLE,IDLE}: begin
@@ -614,7 +615,7 @@ endfunction
         {WRITE_ENC,IDLE}: begin
           o_function_done <= 1'b1;
           CT_outready     <= 1'b0;
-          CT_WAd          <= 1'b0;
+          CT_WAd          <= 8'hx;
           o_status_reg[0] <= 1'b1; 
         end
         {IDLE,WRITE_DEC}: begin

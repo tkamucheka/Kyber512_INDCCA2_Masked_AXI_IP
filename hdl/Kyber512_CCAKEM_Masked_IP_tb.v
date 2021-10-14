@@ -159,7 +159,7 @@ Kyber512_CCAKEM_Masked_IP_v1_0 # (
   .o_ciphertext(w_ociphertext),
   .o_shared_secret(w_oshared_secret),
   .PRNG_enable(w_PRNG_enable),
-  .PRNG_out(w_PRNG_out),
+  .PRNG_data(w_PRNG_out),
 
 
   // Ports of Axi Slave Bus Interface S00_AXI
@@ -380,12 +380,12 @@ task s01_axi_write;
   input [31:0] addr;
   input [31:0] data;
   begin
-    #3 s01_write_addr <= addr;	//Put write address on bus
-    s01_write_data <= data;	//put write data on bus
+    #3 s01_write_addr    <= addr;	//Put write address on bus
+    s01_write_data       <= data;	//put write data on bus
     s01_write_addr_valid <= 1'b1;	//indicate address is valid
     s01_write_data_valid <= 1'b1;	//indicate data is valid
     s01_write_resp_ready <= 1'b1;	//indicate ready for a response
-    s01_write_strb <= 4'hF;		//writing all 4 bytes
+    s01_write_strb       <= 4'hF;	//writing all 4 bytes
 
     //wait for one slave ready signal or the other
     wait(s01_write_data_ready || s01_write_addr_ready);

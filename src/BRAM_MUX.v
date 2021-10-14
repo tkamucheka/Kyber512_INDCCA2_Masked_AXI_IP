@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -29,10 +30,10 @@ module BRAM_MUX(
   input [127 : 0] P4_M2_WData,
   input [2 : 0] P4_M2_RAd,
   input [2 : 0] P5_M2_RAd,
-//   input P6_M2_WEN,
-//   input [7 : 0] P6_M2_WAd,
-//   input [127 : 0] P6_M2_WData,
-  input [2 : 0] P7_M2_RAd,       
+  // input P6_M2_WEN,
+  // input [7 : 0] P6_M2_WAd,
+  // input [127 : 0] P6_M2_WData,
+  // input [2 : 0] P7_M2_RAd,
   output reg M2_WEN,
   output reg [7 : 0] M2_WAd,
   output reg [127 : 0] M2_WData,

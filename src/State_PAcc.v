@@ -142,18 +142,16 @@ always @(posedge clk/* or negedge rst_n*/)
           NTT_Poly_0_RAd              <= (get > 1) ? 1 : 0;
           get                         <= get + 1;
           // DEBUG:
-          $display("PACC (IN)[V, 0, PK/SK]: %h", EncPk_DecSk1_PolyVec_RData);
-          $display("PACC (IN)[V, 0, PK/SK]: %h", EncPk_DecSk2_PolyVec_RData);
+          $display("PACC (IN)[V, 0, PK/SK]: %h", EncPk_DecSk_PolyVec_RData);
           $display("PACC (IN)[V, 0, SP/BP]: %h", NTT_Poly_0_RData);
         end
       {Pop_NTT_EncPk_DecSk,PAcc_0}: begin                          
           P0_Poly_PAcc_i_a_PolyVec_1  <= EncPk_DecSk_PolyVec_RData;  
           // P0_Poly_PAcc_i_a_PolyVec_1   <= a1_debug;
-          P0_Poly_PAcc_enable         <= 1'b1;                    
+          P0_Poly_PAcc_enable         <= 1'b1;
           get                         <= 0;
           // DEBUG:
-          $display("PACC (IN)[V, 1, PK/SK]: %h", EncPk_DecSk1_PolyVec_RData);
-          $display("PACC (IN)[V, 1, PK/SK]: %h", EncPk_DecSk2_PolyVec_RData);
+          $display("PACC (IN)[V, 1, PK/SK]: %h", EncPk_DecSk_PolyVec_RData);
           $display("PACC (IN)[V, 1, SP/BP]: %h", NTT_Poly_0_RData);
         end
       {PAcc_0,PAcc_0}: begin
@@ -183,12 +181,15 @@ always @(posedge clk/* or negedge rst_n*/)
             Enc_BpV_DecMp2_WData        <= P0_Poly_PAcc_oPoly[(Enc_BpV_DecMp_WAd-128+2)*128 -1 -: 128];
         end
       {Push_0,Pop_NTT_EncPk_DecSk}: begin
-          dec_round <= 1;
-          EncPk_DecSk_PolyVec_RAd     <= 0;
+          dec_round                   <= 1;
+          get                         <= 0;
+          NTT_Poly_0_RAd              <= 0;
+          EncPk_DecSk_PolyVec_RAd     <= 1;
           Enc_BpV_DecMp_WAd           <= 0;
           Enc_BpV_DecMp_outready      <= 1'b0;
       end
       {Push_0,IDLE}: begin
+          dec_round                   <= 0;
           Function_done               <= 1'b1;
           Enc_BpV_DecMp_outready      <= 1'b0;
           EncPk_DecSk_PolyVec_RAd     <= 0;
@@ -197,6 +198,9 @@ always @(posedge clk/* or negedge rst_n*/)
           Enc_BpV_DecMp1_WData        <= 0;
           Enc_BpV_DecMp2_WData        <= 0;                   
         end
+      // 
+      // Enc
+      //
       {Push_0,Pop_Enc_At0}: begin
           Enc_BpV_DecMp_outready      <= 1'b0;
           AtG_RAd                     <= 0;

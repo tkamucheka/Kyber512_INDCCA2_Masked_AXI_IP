@@ -163,6 +163,7 @@ always @(posedge clk/* or negedge rst_n*/)
           INTT_Enc_BpV_DecMp_outready <= 1'b0;
       end
       {Push0,IDLE}: begin
+          dec_round                   <= 0;
           INTT_Enc_BpV_DecMp_outready <= 1'b0;
           Function_done               <= 1'b1;
           P0_INTT_enable              <= 1'b0;
@@ -172,6 +173,7 @@ always @(posedge clk/* or negedge rst_n*/)
           INTT_Enc_BpV_DecMp1_WData   <= 0;
         end
       {Push0,Pop1}: begin
+          dec_round                   <= 0;
           INTT_Enc_BpV_DecMp_outready <= 1'b0;
           PACC_EncBp_DecMp_Poly_RAd   <= 1; 
           get                         <= 0;          

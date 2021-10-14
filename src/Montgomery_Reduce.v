@@ -25,7 +25,7 @@ module Montgomery_Reduce #(
 (
   input                 clk,
   input                 ce,
-  input   signed [15:0] iCoeffs_a,
+  input   signed [31:0] iCoeffs_a,
   output  reg    [15:0] oCoeffs,
   output  wire          reduce_done
 );
@@ -37,7 +37,7 @@ reg signed [31:0] t;
 reg signed [15:0] u;
 wire signed [31:0] fifo_out;
 
-reg [K-1:0] state;
+reg [K-1:0] state = 0;
 
 assign reduce_done = state[K-1];
 
@@ -45,7 +45,7 @@ always @(posedge clk)
   state <= {state[K-2:0], ce};
 
 always @(posedge clk) begin
-  a <= {{16{iCoeffs_a[15]}}, iCoeffs_a};
+  a <= iCoeffs_a;
   u <= a * $signed(MontgomeryR_QINV);
   t <= u * $signed(KYBER_Q);
   oCoeffs <= $signed(fifo_out - t) >>> 16;
@@ -53,7 +53,7 @@ end
 
 Shift_Reg #(.MSB(K-1)) FIFO[31:0] (
   .clk(clk),
-  .din({{16{iCoeffs_a[15]}}, iCoeffs_a}),
+  .din(iCoeffs_a),
   .dout(fifo_out)
 );
 

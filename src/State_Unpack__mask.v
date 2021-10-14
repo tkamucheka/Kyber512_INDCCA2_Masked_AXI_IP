@@ -19,48 +19,43 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module State_Unpack__mask #(parameter KYBER_Q = 3329)(
+module State_Unpack__mask #(
+  parameter KYBER_Q = 3329,
+  parameter COEFF_SZ = 16
+) (
   input              clk,
   input              rst_n,
   input              enable,
-  input      [ 15:0] rand,
+  input      [127:0] rand,
   input      [127:0] s,
   output reg         function_done,
   output reg [127:0] s1, 
   output reg [127:0] s2
 );
 
-reg [7:0] m;
+reg [3:0]           m;
+reg [COEFF_SZ-1:0]  a;
+reg                 reduce_enable;
+wire                data_valid;
+wire [COEFF_SZ-1:0] y;
 
-reg  [15:0] dividend_tdata;
-wire [15:0] divisor_tdata;
-wire [31:0] dout_tdata;
-
-reg  divisor_tvalid, dividend_tvalid;
-wire dout_tvalid;
-
-assign divisor_tdata = KYBER_Q;
-
-reg [3:0] cstate,nstate;
-localparam IDLE = 4'd0;
-localparam DIV  = 4'd1;
-localparam WAIT = 4'd2;
-localparam PUSH = 4'd3;
+reg [1:0] cstate,nstate;
+localparam IDLE   = 2'd0;
+localparam REDUCE = 2'd1;
+localparam PUSH   = 2'd2;
 
 always @(posedge clk or negedge rst_n) begin
   if (rst_n == 1'b0)  cstate <= IDLE;
   else                cstate <= nstate;
 end
 
-always @(cstate, enable, dout_tvalid, m) begin
+always @(cstate, enable, m, data_valid) begin
   case (cstate)
-    IDLE:     if (enable)       nstate <= DIV;
+    IDLE:     if (enable)       nstate <= REDUCE;
               else              nstate <= IDLE;
-    DIV:      if (m > 8)        nstate <= WAIT;
-              else              nstate <= DIV;
-    WAIT:     if (dout_tvalid)  nstate <= PUSH;
-              else              nstate <= WAIT;
-    PUSH:     if (m > 8)        nstate <= IDLE;
+    REDUCE:   if (m == 7)       nstate <= PUSH;
+              else              nstate <= REDUCE;
+    PUSH:     if (!data_valid)  nstate <= IDLE;
               else              nstate <= PUSH; 
     default:                    nstate <= IDLE;
   endcase
@@ -75,54 +70,58 @@ always @(posedge clk or negedge rst_n) begin
     case ({cstate,nstate})
       {IDLE,IDLE}: begin
         function_done <= 1'b0;
-        m <= 0;
+        m             <= 0;
       end
-      {IDLE,DIV}: begin
-        s1[127-(m*16) -: 16] <= rand;
-        dividend_tdata       <= s[127-(m*16) -: 16] - rand + KYBER_Q;
-        dividend_tvalid      <= 1'b1;
-        divisor_tvalid       <= 1'b1;
+      {IDLE,REDUCE}: begin
+        s1[127-(m*16) -: 16] <= rand[127-(m*16) -: 16];
+        a                    <= s[127-(m*16) -: 16] - rand[127-(m*16) -: 16] + KYBER_Q;
+        reduce_enable        <= 1'b1;  
       end
-      {DIV,DIV}: begin
-        s2[127-(m*16) -: 16] <= dout_tdata[15:0];
-
-        s1[127-((m+1)*16) -: 16] <= rand;
-        dividend_tdata           <= s[127-((m+1)*16) -: 16] - rand + KYBER_Q;
-        dividend_tvalid          <= 1'b1;
-        divisor_tvalid           <= 1'b1;
+      {REDUCE,REDUCE}: begin
+        s1[127-((m+1)*16) -: 16] <= rand[127-((m+1)*16) -: 16];
+        a                        <= s[127-((m+1)*16) -: 16] - rand[127-((m+1)*16) -: 16] + KYBER_Q;
         m                        <= m + 1;
+        reduce_enable            <= 1'b1;
       end
-      {DIV,WAIT}: begin
-        dividend_tvalid          <= 1'b0;
-        divisor_tvalid           <= 1'b0;
-        m                        <= 0;
+      {REDUCE,PUSH}: begin
+        reduce_enable        <= 1'b0;
+        // m                    <= 0;
       end
-      {WAIT,WAIT}: ;
-      {WAIT,PUSH}: begin
-        s2[127-(m*16) -: 16] <= dout_tdata[15:0];
-        m <= m + 1;
-      end
-      {PUSH,PUSH}: begin
-        s2[127-(m*16) -: 16] <= dout_tdata[15:0];
-        m <= m + 1;
-      end
+      {PUSH,PUSH}: ;
       {PUSH,IDLE}: begin
         function_done <= 1'b1;
       end
       default: ;
     endcase
   end
-  
 end
 
-MOD_Q_Div P0 (
-.aclk(clk),
-.s_axis_divisor_tvalid(divisor_tvalid),
-.s_axis_divisor_tdata(divisor_tdata),
-.s_axis_dividend_tvalid(dividend_tvalid),
-.s_axis_dividend_tdata(dividend_tdata),
-.m_axis_dout_tvalid(dout_tvalid),
-.m_axis_dout_tdata(dout_tdata)
+reg [3:0] w = 0;
+always @(posedge clk) begin
+  if (data_valid) begin
+    s2[127-(w*16) -: 16] <= y;
+    w <= w + 1;
+  end else begin
+    w <= 0;
+  end
+end
+
+Barrett_Reduce P1 (
+  .clk(clk),
+  .ce(reduce_enable),
+  .iCoeffs_a(a),
+  .oCoeffs(y),
+  .reduce_done(data_valid)
 );
+
+// MOD_Q_REDUCE P0 (
+// .aclk(clk),
+// .s_axis_REDUCEisor_tvalid(REDUCEisor_tvalid),
+// .s_axis_REDUCEisor_tdata(REDUCEisor_tdata),
+// .s_axis_REDUCEidend_tvalid(REDUCEidend_tvalid),
+// .s_axis_REDUCEidend_tdata(REDUCEidend_tdata),
+// .m_axis_dout_tvalid(dout_tvalid),
+// .m_axis_dout_tdata(dout_tdata)
+// );
 
 endmodule

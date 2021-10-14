@@ -34,15 +34,15 @@ module State_Polytomsg__masked_decode_s0 #(
 );
 
 localparam K = 5;
-localparam Q = (-KYBER_Q >>> 2) + KYBER_Q + 1;
+localparam Q = (KYBER_Q / 4) + KYBER_Q;
 
-wire barret_done;
-wire [15:0] barret_out;
+// wire barret_done;
+// wire [15:0] barret_out;
 
 reg [15:0] t = 0;
-reg [15:0] t1 = 0;
+// reg [15:0] t1 = 0;
 
-assign divisor_tdata = KYBER_Q;
+// assign divisor_tdata = KYBER_Q;
 
 reg [K-1:0] state = 0;
 
@@ -50,7 +50,7 @@ always @(posedge clk)
   state <= {state[K-2:0], ce};
 
 always @(posedge clk)
-  if (ce) t <= c1 + Q;
+  if (ce) t <= c1 - Q;
   else    t <= 16'h0;
 
 Barrett_Reduce P1 (
