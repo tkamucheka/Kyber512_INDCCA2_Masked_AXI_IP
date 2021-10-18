@@ -135,7 +135,7 @@ localparam indcpa_DEC       = 4'd8;
 //   .dout1(enable_DEC)
 // );
 
-// systhesis translate_off
+// synthesis translate_off
 integer enc_cycles, dec_cycles;
 reg enable_enc_counter = 0;
 reg enable_dec_counter = 0;
@@ -152,7 +152,7 @@ always @(posedge i_clk) begin
       dec_cycles <= dec_cycles + 1;
   end
 end
-// sythesis translate_on
+// synthesis translate_on
 
 // Drivers
 assign o_cstate_flag     = cstate;
@@ -242,7 +242,7 @@ always @(posedge i_clk or negedge i_reset_n)
         T1_indcpa_DEC_enable  <= 1'b1;
         mux_enc_dec_R         <= 1'b1;
 
-        // systhesis translate_off
+        // synthesis translate_off
         enable_dec_counter    <= 1'b1;
         // synthesis translate_on 
       end
@@ -259,7 +259,7 @@ always @(posedge i_clk or negedge i_reset_n)
 
         // synthesis translate_off
         enable_dec_counter            <= 1'b0;
-        // systhesis translate_on
+        // synthesis translate_on
       end
       {IDLE,FetchMEM_ENC}:  begin // Encapsulation
         o_rand_CT_RAd                <= 0;
@@ -294,7 +294,7 @@ always @(posedge i_clk or negedge i_reset_n)
         mux_enc_dec_R                 <= 1'b0;
         o_function_done               <= 1'b0;
 
-        // systhesis translate_off
+        // synthesis translate_off
         enable_enc_counter            <= 1'b1;
         // synthesis translate_on 
       end
@@ -326,7 +326,7 @@ always @(posedge i_clk or negedge i_reset_n)
         o_function_done    <= 1'b1;
         o_cal_flag         <= 1'b0;
 
-        // systhesis translate_off
+        // synthesis translate_off
         enable_enc_counter <= 1'b0;
         // synthesis translate_on 
       end

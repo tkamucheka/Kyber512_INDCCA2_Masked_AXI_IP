@@ -564,7 +564,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>75ca1859</spirit:value>
+            <spirit:value>21929597</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -586,7 +586,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>75ca1859</spirit:value>
+            <spirit:value>21929597</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -600,7 +600,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>84ab4d51</spirit:value>
+            <spirit:value>7f0fff83</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -614,7 +614,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ab4d795b</spirit:value>
+            <spirit:value>b1a7b328</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -628,7 +628,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>45a2f450</spirit:value>
+            <spirit:value>16328387</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -643,7 +643,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f834e64</spirit:value>
+            <spirit:value>cc060ec0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1921,7 +1921,7 @@
       <spirit:file>
         <spirit:name>hdl/Kyber512_CCAKEM_Masked_IP_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9f782ba1</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_88421d56</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -2676,8 +2676,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Kyber512_CCAKEM_Masked_IP_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-10-14T04:38:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-10-14T12:14:19Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdb3bf6_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@f09737_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
@@ -5816,13 +5816,24 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1353a25f_ARCHIVE_LOCATION">/mnt/Storm/projects/Vivado/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3091ec1a_ARCHIVE_LOCATION">/mnt/Storm/projects/Vivado/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@481b9ff4_ARCHIVE_LOCATION">/mnt/Storm/projects/Vivado/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1f515e_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb85e23_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18105403_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e7e143b_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc716aa_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f5efa1c_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11813871_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@675deb7d_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168f6e20_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180feaa0_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65936543_ARCHIVE_LOCATION">c:/work/ip_repo/Kyber512_CCAKEM_Masked_IP_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f9e342b8"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="215c3f08"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ed474994"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="41dcd48c"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c233ee4c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a5928e22"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="191062e2"/>

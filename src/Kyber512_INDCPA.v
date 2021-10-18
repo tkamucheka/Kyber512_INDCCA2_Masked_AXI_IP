@@ -241,13 +241,13 @@ Kyber512_indcpa_ENC P0
   .o_cstate(w_enc_cstate),
   .P2_AtG_outready(w_ENC_P2_AtG_M2_WEN),
   .P2_AtG_M2_WAd(w_ENC_P2_AtG_M2_WAd),
-  .P2_AtG_M2_WData(w_ENC_P2_AtG_M2_WData),
+  .P2_AtG_M2_WData(w_ENC_P2_AtG_M2_WData)
   // .P6_Add_EncBp_DecMp_outready(w_ENC_P6_Add_EncBp_DecMp_outready),
   // .P6_Add_EncBp_DecMp_WAd(w_ENC_P6_Add_EncBp_DecMp_WAd),
   // .P6_Add_EncBp_DecMp_WData(w_ENC_P6_Add_EncBp_DecMp_WData),
   // .SHARED_M2_RData(w_SHARED_M2_RData),
   // DEBUG:
-  .trigger(trigger1)
+  // .trigger(trigger1)
 );
 
 Kyber512_indcpa_DEC P1
@@ -332,7 +332,7 @@ Kyber512_indcpa_DEC P1
   // .reduceBp_debug(reduceBp_debug)
   // --------------------------------------
   // SHARED
-  .o_cstate(w_dec_cstate)
+  .o_cstate(w_dec_cstate),
   // .SHARED_Bp_ct_outready(w_SHARED_Bp_ct_outready),
   // .SHARED_Bp_ct_WAd(w_SHARED_Bp_ct_WAd),
   // .SHARED_Bp_ct_WData(w_SHARED_Bp_ct_WData),  
@@ -341,8 +341,8 @@ Kyber512_indcpa_DEC P1
   // .P5_Sub_EncBp_DecMp_WData(w_DEC_P5_Sub_EncBp_DecMp_WData)
   // .SHARED_M2_RData(w_SHARED_M2_RData),
   // DEBUG:
-  // .trigger1(trigger1),
-  // .trigger2(trigger2)
+  .trigger1(trigger1),
+  .trigger2(trigger2)
 );
 
 Kyber512_INDCPA_Shared P2
@@ -428,7 +428,7 @@ Kyber512_INDCPA_Shared P2
   .i_cstate(w_cstate),
   .ENC_AtG_M2_WEN(w_ENC_P2_AtG_M2_WEN),
   .ENC_AtG_M2_WAd(w_ENC_P2_AtG_M2_WAd),
-  .ENC_AtG_M2_WData(w_ENC_P2_AtG_M2_WData),
+  .ENC_AtG_M2_WData(w_ENC_P2_AtG_M2_WData)
   // .SHARED_Bp_ct_outready(w_SHARED_Bp_ct_outready),
   // .SHARED_Bp_ct_WAd(w_SHARED_Bp_ct_WAd),
   // .SHARED_Bp_ct_WData(w_SHARED_Bp_ct_WData),
@@ -440,7 +440,7 @@ Kyber512_INDCPA_Shared P2
   // .DEC_Sub_EncBp_DecMp_WData(w_DEC_P5_Sub_EncBp_DecMp_WData),
   // .SHARED_M2_RData(w_SHARED_M2_RData),
   // DEBUG:
-  .trigger(trigger2)
+  // .trigger(trigger2)
 );
 
 endmodule
