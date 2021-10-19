@@ -20,7 +20,6 @@
     // User parameters ends
     // Do not modify the parameters beyond this line
 
-
     // Parameters of Axi Slave Bus Interface S00_AXI
     parameter integer C_S00_AXI_DATA_WIDTH  = 32,
     parameter integer C_S00_AXI_ADDR_WIDTH  = 5,
@@ -31,12 +30,11 @@
   )
   (
     // Users to add ports here
-    input kyber_aclk,
-    input kyber_aresetn,
-    input [15:0]  PRNG_data,
-    output        PRNG_enable,
-    output trigger1,
-    output trigger2,
+    input         kyber_aclk,
+    input         kyber_aresetn,
+    input  [15:0] PRNG_data,
+    output        trigger1,
+    output        trigger2,
     // DEBUG:
     // synthesis translate_off
     output debug_function_done,
@@ -164,11 +162,11 @@
   // wire [1023:0] At_debug;
   // wire [255:0] Sp_debug;
   // wire [255:0] eG_debug;
-// wire [1023:0] Bp_debug;
-//  wire [511:0] V_debug;
-//  wire [255:0] reduceV_debug;
-//  wire [255:0] reduceBp_debug;
-//  wire [4095:0] ntt_debug;
+  // wire [1023:0] Bp_debug;
+  //  wire [511:0] V_debug;
+  //  wire [255:0] reduceV_debug;
+  //  wire [255:0] reduceBp_debug;
+  //  wire [4095:0] ntt_debug;
 
 // Instantiation of Axi Bus Interface S01_AXI
   Kyber512_CCAKEM_Masked_IP_v1_0_S01_AXI # ( 
@@ -251,7 +249,6 @@
     .i_enable(w_control[1]),
     .i_mux_enc_dec(w_control[0]),
     .PRNG_data(PRNG_data),
-    .PRNG_enable(PRNG_enable),
     // .i_random(w_random),
     // .i_public_key(w_public_key),
     // .i_ciphertext(w_icipher_text),

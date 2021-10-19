@@ -35,11 +35,10 @@ module Kyber512_INDCPA_Shared #(
   parameter SECRETKEY_SZ        = BYTE_BITS * KYBER512_SK_BYTES,
   parameter COEF_SZ             = 16
 ) (
-  input clk,
-  input rst_n,
-  input mux_enc_dec, // enc0, dec1
-  input [15:0] PRNG_data,
-  output PRNG_enable,
+  input                     clk,
+  input                     rst_n,
+  input                     mux_enc_dec, // enc0, dec1
+  input [15:0]              PRNG_data,
   // S0: UNPACK_PK_SK
   input                     S0_Unpack_enable,
   input [PUBLICKEY_SZ-1:0]  S0_i_PK,
@@ -71,7 +70,7 @@ module Kyber512_INDCPA_Shared #(
   // output         S2_EncPk_DecSk_PolyVec_RAd,   
   // output [2:0]   S2_M2_AtG_RAd,
   output         S2_PAcc_done,
-  // output         S2_Enc_BpV_DecMp_M2_outready,
+  // output         S2_Enc_BpV_DecMp1_M2_outready,
   // output [7:0]   S2_Enc_BpV_DecMp_M2_WAd,
   // output [127:0] S2_Enc_BpV_DecMp1_M2_WData,
   // --------------------------------------
@@ -80,7 +79,8 @@ module Kyber512_INDCPA_Shared #(
   // input [4095:0] S3_PACC_EncBp_DecMp_Poly_M2_RData,
   // output [2:0]   S3_PACC_EncBp_DecMp_Poly_M2_RAd,
   output         S3_INTT_done,
-  output         S3_INTT_Enc_BpV_DecMp_outready,
+  output         S3_INTT_Enc_BpV_DecMp1_outready,
+  output         S3_INTT_Enc_BpV_DecMp2_outready,
   output [6:0]   S3_INTT_Enc_BpV_DecMp_WAd,
   output [127:0] S3_INTT_Enc_BpV_DecMp1_WData,
   output [127:0] S3_INTT_Enc_BpV_DecMp2_WData,
@@ -135,7 +135,8 @@ wire [4095:0] S2_EncPk_DecSk2_PolyVec_RData;
 wire          S2_NTT_Poly_0_RAd;
 wire          S2_EncPk_DecSk_PolyVec_RAd;
 wire [2:0]    S2_M2_AtG_RAd; 
-wire          S2_Enc_BpV_DecMp_M2_outready;
+wire          S2_Enc_BpV_DecMp1_M2_outready;
+wire          S2_Enc_BpV_DecMp2_M2_outready;
 wire [7:0]    S2_Enc_BpV_DecMp_M2_WAd;
 wire [127:0]  S2_Enc_BpV_DecMp1_M2_WData;
 wire [127:0]  S2_Enc_BpV_DecMp2_M2_WData;
@@ -153,7 +154,7 @@ wire [0 : 0]    M2_1_WEN, M2_2_WEN;
 wire [7 : 0]    M2_1_WAd, M2_2_WAd;     // (   7 DOWNTO 0)
 wire [127 : 0]  M2_1_WData, M2_2_WData; // ( 127 DOWNTO 0)
 wire [2 : 0]    M2_1_RAd, M2_2_RAd;     // (   2 DOWNTO 0)
-wire [4095 : 0] M2_1_RData, M2_2_RData; // (4095 DOWNTO 0)
+// wire [4095 : 0] M2_1_RData, M2_2_RData; // (4095 DOWNTO 0)
 
 
 // BRAM
@@ -213,7 +214,7 @@ BRAM_MUX mux0(
 .P2_AtG_WEN(ENC_AtG_M2_WEN),
 .P2_AtG_WAd(ENC_AtG_M2_WAd),
 .P2_AtG_WData(ENC_AtG_M2_WData),      
-.P4_M2_WEN(S2_Enc_BpV_DecMp_M2_outready),
+.P4_M2_WEN(S2_Enc_BpV_DecMp1_M2_outready),
 .P4_M2_WAd(S2_Enc_BpV_DecMp_M2_WAd),
 .P4_M2_WData(S2_Enc_BpV_DecMp1_M2_WData),
 .P4_M2_RAd(S2_M2_AtG_RAd),
@@ -233,7 +234,7 @@ BRAM_MUX mux1(
 .P2_AtG_WEN(),
 .P2_AtG_WAd(),
 .P2_AtG_WData(),      
-.P4_M2_WEN(S2_Enc_BpV_DecMp_M2_outready),
+.P4_M2_WEN(S2_Enc_BpV_DecMp2_M2_outready),
 .P4_M2_WAd(S2_Enc_BpV_DecMp_M2_WAd),
 .P4_M2_WData(S2_Enc_BpV_DecMp2_M2_WData),
 .P4_M2_RAd(),
@@ -258,7 +259,6 @@ State_Unpack S0 (
 .ipackedsk(S0_i_SK),
 .PRNG_data(PRNG_data),
 .Function_Done(S0_Unpack_pk_sk_done),
-.PRNG_enable(PRNG_enable),
 .EncPk_DecSk_PolyVec_outready(S0_EncPk_DecSk_PolyVec_outready),
 .EncPk_DecSk_PolyVec_WAd(S0_EncPk_DecSk_PolyVec_WAd),
 .EncPk_DecSk1_PolyVec_WData(S0_EncPk_DecSk1_PolyVec_WData),
@@ -296,7 +296,8 @@ State_PAcc S2 (
   .EncPk_DecSk_PolyVec_RAd(S2_EncPk_DecSk_PolyVec_RAd), 
   .AtG_RAd(S2_M2_AtG_RAd),
   .Function_done(S2_PAcc_done),
-  .Enc_BpV_DecMp_outready(S2_Enc_BpV_DecMp_M2_outready),
+  .Enc_BpV_DecMp1_outready(S2_Enc_BpV_DecMp1_M2_outready),
+  .Enc_BpV_DecMp2_outready(S2_Enc_BpV_DecMp2_M2_outready),
   .Enc_BpV_DecMp_WAd(S2_Enc_BpV_DecMp_M2_WAd),
   .Enc_BpV_DecMp1_WData(S2_Enc_BpV_DecMp1_M2_WData),
   .Enc_BpV_DecMp2_WData(S2_Enc_BpV_DecMp2_M2_WData)
@@ -314,7 +315,8 @@ State_Invntt S3 (
   .PACC_EncBp_DecMp2_Poly_RData(SHARED_M2_2_RData),
   .PACC_EncBp_DecMp_Poly_RAd(S3_PACC_EncBp_DecMp_Poly_M2_RAd),
   .Function_done(S3_INTT_done),
-  .INTT_Enc_BpV_DecMp_outready(S3_INTT_Enc_BpV_DecMp_outready),
+  .INTT_Enc_BpV_DecMp1_outready(S3_INTT_Enc_BpV_DecMp1_outready),
+  .INTT_Enc_BpV_DecMp2_outready(S3_INTT_Enc_BpV_DecMp2_outready),
   .INTT_Enc_BpV_DecMp_WAd(S3_INTT_Enc_BpV_DecMp_WAd),
   .INTT_Enc_BpV_DecMp1_WData(S3_INTT_Enc_BpV_DecMp1_WData),
   .INTT_Enc_BpV_DecMp2_WData(S3_INTT_Enc_BpV_DecMp2_WData)

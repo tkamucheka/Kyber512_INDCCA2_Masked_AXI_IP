@@ -37,8 +37,8 @@ module PRNG #(parameter integer PRNG_OUT_WIDTH = 32) (
       CASR <= (37'h1000_0000);
       LFSR <= (42'h1000_0001);
     end else if (load) begin
-      CASR <= { 5'h0, seed} | 32'h1000_0000; // Load seed, protect from a seed of 0.
-      LFSR <= {10'h0, seed} | 32'h1000_0000; // Load seed, protect from a seed of 0.
+      CASR <= { 5'h0, seed      } | 32'h1000_0000; // Load seed, protect from a seed of 0.
+      LFSR <= { 9'h0, seed, 1'h0} | 32'h1000_0000; // Load seed, protect from a seed of 0.
     end else if (enable) begin
       CASR[36:0] <= ( ({CASR[35:0],CASR[36]}) ^ ({CASR[0],CASR[36:1]}) ^ (CASR[27]<<27) );
       LFSR[42:0] <= ( ({LFSR[41:0],LFSR[42]}) ^ (LFSR[42]<<41) ^ (LFSR[42]<<20) ^ (LFSR[42]<<1) );

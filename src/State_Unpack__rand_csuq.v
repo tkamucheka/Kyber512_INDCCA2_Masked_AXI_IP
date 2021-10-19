@@ -22,22 +22,13 @@
 
 module State_Unpack__rand_csuq #(
   parameter QBITS    = 12,
-  parameter QBITS2   = QBITS + 1,
   parameter QM       = (1 << QBITS) - 1,
-  parameter QM2      = (1 << QBITS2) - 1
+  parameter COEFF_SZ = 16
 ) (
-  output reg [15:0] rand,
-  input      [15:0] PRNG_data
+  output [COEFF_SZ-1:0] rand,
+  input  [COEFF_SZ-1:0] PRNG_data
 );
 
-localparam KYBER_Q = 3329;
-
-always @(*) begin
-  if (PRNG_data >= KYBER_Q) begin
-    rand <= (PRNG_data - KYBER_Q) & QM;
-  end else begin
-    rand <= PRNG_data & QM;
-  end
-end
+assign rand = PRNG_data & QM;
 
 endmodule

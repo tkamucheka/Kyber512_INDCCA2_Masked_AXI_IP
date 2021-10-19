@@ -26,8 +26,7 @@
   input  [PK_Size-1 : 0]    ipackedpk,
   input  [SK_Size-1 : 0]    ipackedsk,
   input  [15:0]             PRNG_data, 
-  output reg                Function_Done,  
-  output wire               PRNG_enable,
+  output reg                Function_Done,
   output reg                EncPk_DecSk_PolyVec_outready,
   output reg [5 : 0]        EncPk_DecSk_PolyVec_WAd,
   output reg [Length-1 : 0] EncPk_DecSk1_PolyVec_WData,
@@ -84,7 +83,15 @@ always @(posedge clk)
     EncPk_DecSk2_PolyVec_WData    <= 0;
   end else begin
     case({cstate,nstate})
-      {IDLE,IDLE}: Function_Done        <= 1'b0;
+      {IDLE,IDLE}: begin 
+        Function_Done        <= 1'b0;
+
+        // Reset SendDec
+        EncPk_DecSk_PolyVec_outready  <= 1'b0;
+        EncPk_DecSk_PolyVec_WAd       <= 0;
+        EncPk_DecSk1_PolyVec_WData    <= 0;
+        EncPk_DecSk2_PolyVec_WData    <= 0;
+      end
       {IDLE,SendEnc}: begin
           EncPk_DecSk_PolyVec_outready  <= 1'b1;
           EncPk_DecSk_PolyVec_WAd       <= 0;
@@ -141,11 +148,13 @@ always @(posedge clk)
         end
       end
       {SendDec,IDLE}: begin
+          // Send last data chunks
+          EncPk_DecSk_PolyVec_WAd       <= EncPk_DecSk_PolyVec_WAd + 1;
+          EncPk_DecSk1_PolyVec_WData    <= P0_o_poly_s1;
+          EncPk_DecSk2_PolyVec_WData    <= P0_o_poly_s2;
+          EncPk_DecSk_PolyVec_outready  <= 1'b1;
+          
           Function_Done                 <= 1'b1;
-          EncPk_DecSk_PolyVec_outready  <= 1'b0;
-          EncPk_DecSk_PolyVec_WAd       <= 0;
-          EncPk_DecSk1_PolyVec_WData    <= 0;
-          EncPk_DecSk2_PolyVec_WData    <= 0;
         end                     
       default: ;
     endcase
@@ -159,7 +168,6 @@ State_Unpack__poly_frombytes P0 (
   .i_poly(ipackedsk),
   .PRNG_data(PRNG_data),
   .Function_Done(P0_done),
-  .PRNG_enable(PRNG_enable),
   .out_ready(P0_out_ready),
   .o_poly_s1(P0_o_poly_s1),
   .o_poly_s2(P0_o_poly_s2)

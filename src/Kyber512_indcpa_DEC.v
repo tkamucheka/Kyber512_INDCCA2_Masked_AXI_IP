@@ -81,7 +81,8 @@ module Kyber512_indcpa_DEC #(
   // output [4095:0] S3_PACC_EncBp_DecMp_Poly_M2_RData,
   // input [2:0]     S3_PACC_EncBp_DecMp_Poly_M2_RAd,
   input           S3_INTT_done,
-  input           S3_INTT_Enc_BpV_DecMp_outready,
+  input           S3_INTT_Enc_BpV_DecMp1_outready,
+  input           S3_INTT_Enc_BpV_DecMp2_outready,
   input [6:0]     S3_INTT_Enc_BpV_DecMp_WAd,
   input [127:0]   S3_INTT_Enc_BpV_DecMp1_WData,
   input [127:0]   S3_INTT_Enc_BpV_DecMp2_WData,
@@ -288,7 +289,7 @@ always @(cstate or enable or P0_Unpack_Ciphertext_done or S1_NTT_done or
           S2_PAcc_done or S3_INTT_done or P5_Sub_done or
           S4_Reduce_done or P7_Poly_ToMsg_done) begin
   case (cstate)
-    IDLE:       if(enable && !dirty)            nstate <= Unpack;
+    IDLE:       if (enable && !dirty)           nstate <= Unpack;
                 else                            nstate <= IDLE;
     Unpack:     if (P0_Unpack_Ciphertext_done)  nstate <= NTT;
                 else                            nstate <= Unpack;
@@ -302,7 +303,7 @@ always @(cstate or enable or P0_Unpack_Ciphertext_done or S1_NTT_done or
                 else                            nstate <= Sub;
     Reduce:     if (S4_Reduce_done)             nstate <= Poly_ToMsg;
                 else                            nstate <= Reduce; 
-    Poly_ToMsg: if (P7_Poly_ToMsg_done) nstate <= IDLE;
+    Poly_ToMsg: if (P7_Poly_ToMsg_done)         nstate <= IDLE;
                 else                            nstate <= Poly_ToMsg; 
     default:                                    nstate <= IDLE;
   endcase          
@@ -420,7 +421,7 @@ L128_AtG M3_2 (
 
 L128_INTT_Enc_BpV_DecMp M4_1 (
 .clka(clk),
-.wea(S3_INTT_Enc_BpV_DecMp_outready),
+.wea(S3_INTT_Enc_BpV_DecMp1_outready),
 .addra(S3_INTT_Enc_BpV_DecMp_WAd),   //(6 DOWNTO 0);
 .dina(S3_INTT_Enc_BpV_DecMp1_WData), //(127 DOWNTO 0);
 .clkb(clk),
@@ -430,7 +431,7 @@ L128_INTT_Enc_BpV_DecMp M4_1 (
 
 L128_INTT_Enc_BpV_DecMp M4_2 (
 .clka(clk),
-.wea(S3_INTT_Enc_BpV_DecMp_outready),
+.wea(S3_INTT_Enc_BpV_DecMp2_outready),
 .addra(S3_INTT_Enc_BpV_DecMp_WAd),   //(6 DOWNTO 0);
 .dina(S3_INTT_Enc_BpV_DecMp2_WData), //(127 DOWNTO 0);
 .clkb(clk),

@@ -31,7 +31,7 @@ module Kyber512_INDCCA_Masked #(
   parameter KYBER_512_SSBytes   = 32,
   parameter KYBER_512_RandBytes = 32,
   parameter RAND_SZ             = Byte_bits * KYBER_512_RandBytes,
-  parameter CIPHERTEXT_SZ      = Byte_bits * KYBER_512_CtBytes,
+  parameter CIPHERTEXT_SZ       = Byte_bits * KYBER_512_CtBytes,
   parameter SECRET_KEY_SZ       = Byte_bits * KYBER_512_SKBytes,
   parameter SHARED_SECRET_SZ    = Byte_bits * KYBER_512_SSBytes,
   parameter PUBLIC_KEY_SZ       = Byte_bits * KYBER_512_PKBytes
@@ -40,8 +40,7 @@ module Kyber512_INDCCA_Masked #(
   input   wire                          i_reset_n,
   input   wire [0:0]                    i_enable,
   input   wire                          i_mux_enc_dec,
-  input   wire [15:0] PRNG_data,
-  output  wire        PRNG_enable,
+  input   wire [15:0]                   PRNG_data,
   // input   wire [RAND_SZ-1:0]         i_random,
   // input   wire [PUBLIC_KEY_SZ-1:0]   i_public_key,
   // input   wire [CIPHERTEXT_SZ-1:0]   i_ciphertext,
@@ -125,15 +124,6 @@ localparam Post_indcpa_ENC  = 4'd5;
 localparam FetchMEM_DEC     = 4'd6;
 localparam ReadMEM_DEC      = 4'd7;
 localparam indcpa_DEC       = 4'd8;
-
-// // Enable demux
-// Demux A0 (
-//   .clk(i_clk),
-//   .select(i_mux_enc_dec),
-//   .din(i_enable),
-//   .dout0(enable_ENC),
-//   .dout1(enable_DEC)
-// );
 
 // synthesis translate_off
 integer enc_cycles, dec_cycles;
@@ -365,7 +355,6 @@ Kyber512_INDCPA T1 (
   .rst_n(i_reset_n),
   .mux_enc_dec(mux_enc_dec_R),
   .PRNG_data(PRNG_data),
-  .PRNG_enable(PRNG_enable),
   // INDCPA_ENC
   .i_indcpa_enc_enable(T1_indcpa_ENC_enable),
   .i_PK(i_public_key),
@@ -383,9 +372,5 @@ Kyber512_INDCPA T1 (
   .trigger1(trigger1),
   .trigger2(trigger2)
 );
-
-// TRNG KEM_TRNG_0 (
-
-// );
 
 endmodule

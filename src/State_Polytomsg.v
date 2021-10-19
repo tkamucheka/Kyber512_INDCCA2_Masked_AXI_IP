@@ -48,6 +48,7 @@ always @(posedge clk) begin
 end
 // synthesis translate_on
 
+reg   [15:0] c1, c2;
 reg   get;
 reg   Cal_enable;              
 wire  data_valid;
@@ -80,20 +81,32 @@ always @(posedge clk or negedge rst_n) begin
   if(!rst_n) begin
     Function_done <= 1'b0;
     Cal_enable    <= 1'b0;
+    get           <= 1'b0;
+    c1 <= 0;
+    c2 <= 0;
   end else begin
     case({cstate,nstate})
       {IDLE,IDLE}: begin
-          Function_done <=  1'b0; 
+          Function_done <=  1'b0;
+          c1 <= 0;
+          c2 <= 0;
         end
       {IDLE,Pop_Mp}: begin              
           Reduce_DecMp_RAd <= 0;
+          get              <= 1'b0;
           // synthesis translate_off
           enable_counter   <= 1'b1;
           // synthesis translate_on     
         end      
-      {Pop_Mp,Pop_Mp}: begin 
-          Reduce_DecMp_RAd <= Reduce_DecMp_RAd + 1;
-          Cal_enable       <= 1'b1;
+      {Pop_Mp,Pop_Mp}: begin
+          if (get == 1'b0) 
+            get              <= 1'b1;
+          else begin
+            c1 <= {4'h0, Reduce_DecMp1_RData};
+            c2 <= {4'h0, Reduce_DecMp2_RData};
+            Reduce_DecMp_RAd <= Reduce_DecMp_RAd + 1;
+            Cal_enable       <= 1'b1;
+          end
           // synthesis translate_off
           // DEBUG:
           $display("Poly_tomsg (IN) [Mp %h]: %h", Reduce_DecMp_RAd, Reduce_DecMp1_RData);
@@ -101,6 +114,7 @@ always @(posedge clk or negedge rst_n) begin
           // synthesis translate_on
         end
       {Pop_Mp,Cal}: begin
+          get <= 1'b0;
           // synthesis translate_off
           // DEBUG:
           $display("Poly_tomsg (IN) [Mp %h]: %h", Reduce_DecMp_RAd, Reduce_DecMp1_RData);
@@ -139,6 +153,7 @@ end
 
 State_Polytomsg__masked_decode P0 (
   .clk(clk),
+  .rst_n(rst_n),
   .ce(Cal_enable),
   .c1({4'h0, Reduce_DecMp1_RData}),
   .c2({4'h0, Reduce_DecMp2_RData}),

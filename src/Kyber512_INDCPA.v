@@ -39,7 +39,6 @@ module Kyber512_INDCPA #(
   input rst_n,
   input mux_enc_dec,
   input [15:0] PRNG_data,
-  output       PRNG_enable,
   // INDCPA ENC
   input                       i_indcpa_enc_enable,
   input  [PUBLICKEY_SZ-1:0]   i_PK,
@@ -56,8 +55,8 @@ module Kyber512_INDCPA #(
   output [MSG_SZ-1:0]         o_Msg,
   // ------------------------
   // DEBUG:
-  output trigger1,
-  output trigger2
+  output wire trigger1,
+  output wire trigger2
 );
 
 // S0: UNPACK_PK_SK
@@ -105,7 +104,8 @@ wire          w_P2_S3_Invntt_enable = mux_enc_dec ?
 // wire [4095:0] w_P2_S3_M2_RData;
 // wire [2:0]    w_P2_S3_P5_M2_RAd;
 wire          w_P2_S3_P5_Invntt_done;
-wire          w_P2_S3_INTT_Enc_BpV_DecMp_outready;
+wire          w_P2_S3_INTT_Enc_BpV_DecMp1_outready;
+wire          w_P2_S3_INTT_Enc_BpV_DecMp2_outready;
 wire [6:0]    w_P2_S3_INTT_Enc_BpV_DecMp_WAd;
 wire [127:0]  w_P2_S3_INTT_Enc_BpV_DecMp1_WData;
 wire [127:0]  w_P2_S3_INTT_Enc_BpV_DecMp2_WData;
@@ -212,7 +212,7 @@ Kyber512_indcpa_ENC P0
   // .S3_PACC_EncBp_DecMp_Poly_M2_RData(w_SHARED_M2_RData),
   // .S3_PACC_EncBp_DecMp_Poly_M2_RAd(w_P2_S3_P5_M2_RAd),
   .S3_INTT_done(w_P2_S3_P5_Invntt_done),
-  .S3_INTT_Enc_BpV_DecMp_outready(w_P2_S3_INTT_Enc_BpV_DecMp_outready),
+  .S3_INTT_Enc_BpV_DecMp_outready(w_P2_S3_INTT_Enc_BpV_DecMp1_outready),
   .S3_INTT_Enc_BpV_DecMp_WAd(w_P2_S3_INTT_Enc_BpV_DecMp_WAd),
   .S3_INTT_Enc_BpV_DecMp_WData(w_P2_S3_INTT_Enc_BpV_DecMp1_WData),
   // INTT DEBUG
@@ -303,7 +303,8 @@ Kyber512_indcpa_DEC P1
   // .S3_PACC_EncBp_DecMp_Poly_M2_RData(w_SHARED_M2_RData),
   // .S3_PACC_EncBp_DecMp_Poly_M2_RAd(w_P2_S3_P5_M2_RAd),
   .S3_INTT_done(w_P2_S3_P5_Invntt_done),
-  .S3_INTT_Enc_BpV_DecMp_outready(w_P2_S3_INTT_Enc_BpV_DecMp_outready),
+  .S3_INTT_Enc_BpV_DecMp1_outready(w_P2_S3_INTT_Enc_BpV_DecMp1_outready),
+  .S3_INTT_Enc_BpV_DecMp2_outready(w_P2_S3_INTT_Enc_BpV_DecMp2_outready),
   .S3_INTT_Enc_BpV_DecMp_WAd(w_P2_S3_INTT_Enc_BpV_DecMp_WAd),
   .S3_INTT_Enc_BpV_DecMp1_WData(w_P2_S3_INTT_Enc_BpV_DecMp1_WData),
   .S3_INTT_Enc_BpV_DecMp2_WData(w_P2_S3_INTT_Enc_BpV_DecMp2_WData),
@@ -351,7 +352,6 @@ Kyber512_INDCPA_Shared P2
   .rst_n(rst_n),
   .mux_enc_dec(mux_enc_dec), // enc0, dec1
   .PRNG_data(PRNG_data),
-  .PRNG_enable(PRNG_enable),
   // --------------------------------------
   // S0: UNPACK_PK_SK
   .S0_Unpack_enable(w_P2_S0_Unpack_pk_sk_enable),
@@ -396,7 +396,8 @@ Kyber512_INDCPA_Shared P2
   // .S3_PACC_EncBp_DecMp_Poly_M2_RData(w_SHARED_M2_RData),
   // .S3_PACC_EncBp_DecMp_Poly_M2_RAd(w_P2_S3_P5_M2_RAd),
   .S3_INTT_done(w_P2_S3_P5_Invntt_done),
-  .S3_INTT_Enc_BpV_DecMp_outready(w_P2_S3_INTT_Enc_BpV_DecMp_outready),
+  .S3_INTT_Enc_BpV_DecMp1_outready(w_P2_S3_INTT_Enc_BpV_DecMp1_outready),
+  .S3_INTT_Enc_BpV_DecMp2_outready(w_P2_S3_INTT_Enc_BpV_DecMp2_outready),
   .S3_INTT_Enc_BpV_DecMp_WAd(w_P2_S3_INTT_Enc_BpV_DecMp_WAd),
   .S3_INTT_Enc_BpV_DecMp1_WData(w_P2_S3_INTT_Enc_BpV_DecMp1_WData),
   .S3_INTT_Enc_BpV_DecMp2_WData(w_P2_S3_INTT_Enc_BpV_DecMp2_WData),

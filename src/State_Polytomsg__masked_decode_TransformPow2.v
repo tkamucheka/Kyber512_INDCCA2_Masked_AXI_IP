@@ -25,39 +25,29 @@ module State_Polytomsg__masked_decode_TransformPow2 #(
   parameter COEFF_SZ = 16,
   parameter QBITS    = 12,
   parameter QBITS2   = QBITS + 1,
-  parameter QM2      = (1 << QBITS2) - 1
+  parameter QM2      = (1 << QBITS2) - 1,
+  parameter RAND_SZ  = COEFF_SZ * 5
 ) (
   input                      clk,
   input                      ce,
   input       [COEFF_SZ-1:0] c1,
   input       [COEFF_SZ-1:0] c2,
-  input       [COEFF_SZ-1:0] PRNG_data,
+  input       [ RAND_SZ-1:0] PRNG_data,
   output wire                data_valid,
   output reg  [COEFF_SZ-1:0] y1,
   output reg  [COEFF_SZ-1:0] y2
 );
 
+// Splice PRNG data
+function [COEFF_SZ-1:0] PRAND;
+  input [2:0] w;
+  PRAND = PRNG_data[RAND_SZ-(COEFF_SZ*w)-1 -: COEFF_SZ];
+endfunction
+
+// Pipeline stages
 localparam K = 6;
 
-wire [COEFF_SZ-1:0] PRNG_data1;
-wire [COEFF_SZ-1:0] PRNG_data2;
-wire [COEFF_SZ-1:0] PRNG_data3;
-wire [COEFF_SZ-1:0] PRNG_data4;
-wire [COEFF_SZ-1:0] PRNG_data5;
-wire [COEFF_SZ-1:0] PRNG_data6;
-
 reg [K-1:0] state = 0;
-
-// PRNG Core
-RNG_core PRNG_inst0 (
-  .clk(clk),
-  .r1(PRNG_data1),
-  .r2(PRNG_data2),
-  .r3(PRNG_data3),
-  .r4(PRNG_data4),
-  .r5(PRNG_data5),
-  .r6()
-);
 
 // Driver
 assign data_valid = state[K-1];
@@ -71,7 +61,7 @@ reg  [COEFF_SZ-1:0] stage0_y2  = 0;
 reg  [COEFF_SZ-1:0] stage0_ze1 = 0;
 
 always @(posedge clk) begin
-  stage0_y1     <= PRNG_data1 & QM2;
+  stage0_y1  <= PRAND(0) & QM2;
   stage0_y2  <= c1 - stage0_y1 + c2;
   stage0_ze1 <= stage0_y1 - KYBER_Q;
 end
@@ -86,7 +76,7 @@ A2B A2B_inst0 (
   .ce(state[1]),
   .c1(stage0_ze1),
   .c2(stage0_y2),
-  .PRNG_data(PRNG_data2),
+  .PRNG_data(PRNG_data[RAND_SZ-(COEFF_SZ*1)-1 -: COEFF_SZ]),
   .data_valid(w_stage1_data_valid),
   .y1(w_stage1_ze1),
   .y2(w_stage1_ze2)
@@ -115,8 +105,8 @@ always @(posedge clk) begin
   if (w_stage1_data_valid) begin
     k1  <= MSB(w_stage1_ze1) ^ 1; // ((x >> 12) & 1) ^ 1
     k2  <= MSB(w_stage1_ze2);     // ((x >> 12) & 1)
-    k1p <= PRNG_data3 & QM2;
-    k2p <= PRNG_data4 & QM2;
+    k1p <= PRAND(2) & QM2;
+    k2p <= PRAND(3) & QM2;
   end else begin
     k1  <= 0;
     k2  <= 0;
@@ -126,7 +116,7 @@ always @(posedge clk) begin
 end
 
 always @(posedge clk) begin
-  r          <= PRNG_data5 & QM2;
+  r          <= PRAND(4) & QM2;
   k1Q        <= k1 * KYBER_Q;
   k2Q        <= k2 * KYBER_Q;
   k1pk2pQ    <= 2 * k1p * k2p * KYBER_Q;

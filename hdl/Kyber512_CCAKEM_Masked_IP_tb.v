@@ -129,14 +129,13 @@ wire                        w_trigger2;
 reg         r_PRNG_enable = 0;
 reg         r_PRNG_load = 0;
 reg [31:0]  r_PRNG_seed;
-wire        w_PRNG_enable;
 wire [15:0] w_PRNG_out;
 
 // Instantiation of PRNG core
 PRNG #(.PRNG_OUT_WIDTH(16)) PRNG_0 (
   .clk(aclk),
   .rst_n(arstn),
-  .enable(r_PRNG_enable | w_PRNG_enable),
+  .enable(r_PRNG_enable),
   .load(r_PRNG_load),
   .seed(r_PRNG_seed),
   .out(w_PRNG_out)
@@ -158,7 +157,6 @@ Kyber512_CCAKEM_Masked_IP_v1_0 # (
   .debug_function_done(w_function_done),
   .o_ciphertext(w_ociphertext),
   .o_shared_secret(w_oshared_secret),
-  .PRNG_enable(w_PRNG_enable),
   .PRNG_data(w_PRNG_out),
 
 
@@ -234,9 +232,9 @@ begin
   #(`P*10); // Idle
 
   // Load and enable PRNG
-  #(`P); r_PRNG_seed = SK[31 : 0];
-         r_PRNG_load = 1'b1;
-  #(`P); r_PRNG_load = 1'b0;
+  #(`P); r_PRNG_seed   = SK[31:0];
+         r_PRNG_load   = 1'b1;
+  #(`P); r_PRNG_load   = 1'b0;
   #(`P); r_PRNG_enable = 1'b1;
 
   // Encapsulation
@@ -326,12 +324,12 @@ task s00_axi_write;
   input [31:0] addr;
   input [31:0] data;
   begin
-    #3 s00_write_addr <= addr;	//Put write address on bus
-    s00_write_data <= data;	//put write data on bus
-    s00_write_addr_valid <= 1'b1;	//indicate address is valid
-    s00_write_data_valid <= 1'b1;	//indicate data is valid
-    s00_write_resp_ready <= 1'b1;	//indicate ready for a response
-    s00_write_strb <= 4'hF;		//writing all 4 bytes
+    #3 s00_write_addr    <= addr;	// put write address on bus
+    s00_write_data       <= data;	// put write data on bus
+    s00_write_addr_valid <= 1'b1;	// indicate address is valid
+    s00_write_data_valid <= 1'b1;	// indicate data is valid
+    s00_write_resp_ready <= 1'b1;	// indicate ready for a response
+    s00_write_strb       <= 4'hF;	// writing all 4 bytes
 
     //wait for one slave ready signal or the other
     wait(s00_write_data_ready || s00_write_addr_ready);

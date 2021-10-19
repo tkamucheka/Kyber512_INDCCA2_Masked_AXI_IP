@@ -17,6 +17,12 @@ module State_PAcc#(
   parameter i_b_Poly_Size = i_b_Coeffs_Length * KYBER_N,
   parameter o_Poly_Size = o_Coeffs_Length * KYBER_N
 )(
+  // DEBUG
+  // synthesis translate_off
+  output reg [1023:0] Bp_debug,
+  output reg [ 511:0] V_debug,
+  // synthesis translate_on
+
   input                             clk,    
   input                             rst_n,
   input                             enable,
@@ -29,13 +35,11 @@ module State_PAcc#(
   output reg  [0 : 0]               EncPk_DecSk_PolyVec_RAd,
   output reg  [2 : 0]               AtG_RAd,  
   output reg                        Function_done,
-  output reg                        Enc_BpV_DecMp_outready,
+  output reg                        Enc_BpV_DecMp1_outready,
+  output reg                        Enc_BpV_DecMp2_outready,
   output reg  [7 : 0]               Enc_BpV_DecMp_WAd, // 128-159 EncV/DecMp, 31-63 EncBp0, 64-95 EncBP1
   output reg  [128-1 : 0]           Enc_BpV_DecMp1_WData,
-  output reg  [128-1 : 0]           Enc_BpV_DecMp2_WData,
-  // DEBUG
-  output reg [1023:0] Bp_debug,
-  output reg [ 511:0] V_debug
+  output reg  [128-1 : 0]           Enc_BpV_DecMp2_WData
 );
 
 // reg [4095:0] a0_debug = 4096'h09c404b7086904e506ec0c1a038508b30a3100400301064103e6029504f701c6020c0a710b30073002e5023e044b0c360b3a0ad8028b0460043a03810a6d0a3802a308150180061e02770bcd02e6074c0ccf05a30b0207660a980c8d0c520b610b29065c03c1017e07e4020002f7048b085701710c2c0c50001f04c6057f0324035d0c5607ec08650c08040007810afc0732070508bb036b0b0000570c0a021b026102ca0250001b09180920058707980ce1007c00710603040007db08bc098c03490a290c6a067a04e00366002e0901003d0892046200cc063001ab02960bff03f90a2f01cc0598006901ef0870020a0b790b0c0a8602740280091c02a200290b4e066504340bd9058d0348073a0106052b022e07a402a3093c06de09e00c0702740c480cff029303f30b2e0a0a0ab60051017a073b051c0abe07900684039006b003310c4401870c1b0c300b7300ad045707a608500ba5042e015f0852073008af0485079e02c305130bb804bc0c6e08e704c00a6a04c1053c00e00296099605db01f1032d0b7c07dd01000b610aff007e00c7078609560a0f080b093509da01f801bb03220b2702370c55017d02460547094a08a10bd908ac0286049800ae04830aed0af800380c8102b70c3d059608ac029b0cc90a6d015208ca048b05aa00b308c402e307da01ba007f037c0748053209b205d70610087103ab0bd40bc4;
@@ -52,11 +56,15 @@ reg  [i_a_Poly_Size-1 : 0]  P0_Poly_PAcc_i_a_PolyVec_1;
 reg  [i_b_Poly_Size-1 : 0]  P0_Poly_PAcc_i_b_PolyVec_0;
 reg  [1 : 0]                get;
 
-wire [o_Poly_Size -1 : 0]   P0_Poly_PAcc_oPoly, debug1, debug2;
+wire [o_Poly_Size -1 : 0]   P0_Poly_PAcc_oPoly;
 wire                        P0_Poly_PAcc_done;
 // wire [i_a_Poly_Size-1 : 0]   P0_EncPk_DecSk_poly;
 // wire [i_a_Poly_Size-1 : 0]   P0_AtG_poly;
 // wire [i_b_Poly_Size-1 : 0]   P0_NTT_poly;
+
+// synthesis translate_off
+wire [o_Poly_Size -1 : 0]   debug1, debug2;
+// synthesis translate_on
 
 reg [3:0] cstate,nstate;
 localparam IDLE                 = 4'd0;
@@ -72,8 +80,7 @@ localparam Push_2               = 4'd9;
 
 assign EncPk_DecSk_PolyVec_RData = (dec_round == 1'b0) ? EncPk_DecSk1_PolyVec_RData : EncPk_DecSk2_PolyVec_RData; 
 
-
-always @(posedge clk/* or negedge rst_n*/)
+always @(posedge clk or negedge rst_n)
   if(!rst_n)  cstate <= IDLE;
   else        cstate <= nstate;
   
@@ -87,10 +94,13 @@ begin
                           else                        nstate <= Pop_NTT_EncPk_DecSk;
     PAcc_0:               if(P0_Poly_PAcc_done)       nstate <= Push_0;
                           else                        nstate <= PAcc_0;
-    Push_0:               if((Enc_BpV_DecMp_WAd == 159) && mux_enc_dec && dec_round) nstate <= IDLE;
-                          else if((Enc_BpV_DecMp_WAd == 159) && mux_enc_dec) nstate <= Pop_NTT_EncPk_DecSk;
-                          else if(Enc_BpV_DecMp_WAd == 159)             nstate <= Pop_Enc_At0;
-                          else                                          nstate <= Push_0;           
+    Push_0:               if((Enc_BpV_DecMp_WAd == 159) && mux_enc_dec && dec_round)
+                                                      nstate <= IDLE;
+                          else if((Enc_BpV_DecMp_WAd == 159) && mux_enc_dec) 
+                                                      nstate <= Pop_NTT_EncPk_DecSk;
+                          else if(Enc_BpV_DecMp_WAd == 159)
+                                                      nstate <= Pop_Enc_At0;
+                          else                        nstate <= Push_0;           
     Pop_Enc_At0:          if(get == 2)                nstate <= PAcc_1;
                           else                        nstate <= Pop_Enc_At0;
     PAcc_1:               if(P0_Poly_PAcc_done)       nstate <= Push_1;
@@ -116,7 +126,8 @@ always @(posedge clk/* or negedge rst_n*/)
     // EncPk_DecSk_PolyVec_RAd    <= 1;
     // AtG_RAd                    <= 0;
     Function_done               <= 1'b0;
-    Enc_BpV_DecMp_outready      <= 1'b0;
+    Enc_BpV_DecMp1_outready     <= 1'b0;
+    Enc_BpV_DecMp2_outready     <= 1'b0;
     Enc_BpV_DecMp_WAd           <= 0; 
     Enc_BpV_DecMp1_WData        <= 0;
     get                         <= 0; 
@@ -142,8 +153,10 @@ always @(posedge clk/* or negedge rst_n*/)
           NTT_Poly_0_RAd              <= (get > 1) ? 1 : 0;
           get                         <= get + 1;
           // DEBUG:
+          // synthesis translate_off
           $display("PACC (IN)[V, 0, PK/SK]: %h", EncPk_DecSk_PolyVec_RData);
           $display("PACC (IN)[V, 0, SP/BP]: %h", NTT_Poly_0_RData);
+          // synthesis translate_on
         end
       {Pop_NTT_EncPk_DecSk,PAcc_0}: begin                          
           P0_Poly_PAcc_i_a_PolyVec_1  <= EncPk_DecSk_PolyVec_RData;  
@@ -151,34 +164,42 @@ always @(posedge clk/* or negedge rst_n*/)
           P0_Poly_PAcc_enable         <= 1'b1;
           get                         <= 0;
           // DEBUG:
+          // synthesis translate_off
           $display("PACC (IN)[V, 1, PK/SK]: %h", EncPk_DecSk_PolyVec_RData);
           $display("PACC (IN)[V, 1, SP/BP]: %h", NTT_Poly_0_RData);
+          // synthesis translate_on
         end
       {PAcc_0,PAcc_0}: begin
           P0_Poly_PAcc_enable         <= 1'b0;
         end
       {PAcc_0,Push_0}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
           Enc_BpV_DecMp_WAd           <= 128;
-          if (dec_round == 1'b0)                 
-            Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[128-1 : 0];
-          else 
-            Enc_BpV_DecMp2_WData        <= P0_Poly_PAcc_oPoly[128-1 : 0];
+          if (dec_round == 1'b0) begin                
+            Enc_BpV_DecMp1_outready   <= 1'b1;
+            Enc_BpV_DecMp1_WData      <= P0_Poly_PAcc_oPoly[128-1 : 0];
+          end else begin
+            Enc_BpV_DecMp2_outready   <= 1'b1;
+            Enc_BpV_DecMp2_WData      <= P0_Poly_PAcc_oPoly[128-1 : 0];
+          end
           // DEBUG:
+          // synthesis translate_off
           $display("PACC (OUT)[V]: %h", {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]});
           // V_debug <= {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]};
           // V_debug <= {P0_Poly_PAcc_i_a_PolyVec_0[4095 -: 256], P0_Poly_PAcc_i_b_PolyVec_0[3071 -: 256]};
           // Bp_debug[1023 -: 512] <= {debug1[4095 -: 256], debug1[255 : 0]};
           // Bp_debug[511 : 0]    <= {debug2[4095 -: 256], debug2[255 : 0]};
           // Function_done        <= 1'b1;
+          // synthesis translate_on
         end
       {Push_0,Push_0}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
-          Enc_BpV_DecMp_WAd           <= Enc_BpV_DecMp_WAd + 1;
-          if (dec_round == 1'b0)              
+          Enc_BpV_DecMp_WAd             <= Enc_BpV_DecMp_WAd + 1;
+          if (dec_round == 1'b0) begin             
+            Enc_BpV_DecMp1_outready     <= 1'b1;
             Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[(Enc_BpV_DecMp_WAd-128+2)*128 -1 -: 128];
-          else
+          end else begin
+            Enc_BpV_DecMp2_outready     <= 1'b1;
             Enc_BpV_DecMp2_WData        <= P0_Poly_PAcc_oPoly[(Enc_BpV_DecMp_WAd-128+2)*128 -1 -: 128];
+          end
         end
       {Push_0,Pop_NTT_EncPk_DecSk}: begin
           dec_round                   <= 1;
@@ -186,12 +207,14 @@ always @(posedge clk/* or negedge rst_n*/)
           NTT_Poly_0_RAd              <= 0;
           EncPk_DecSk_PolyVec_RAd     <= 1;
           Enc_BpV_DecMp_WAd           <= 0;
-          Enc_BpV_DecMp_outready      <= 1'b0;
+          Enc_BpV_DecMp1_outready     <= 1'b0;
+          Enc_BpV_DecMp2_outready     <= 1'b0;
       end
       {Push_0,IDLE}: begin
           dec_round                   <= 0;
           Function_done               <= 1'b1;
-          Enc_BpV_DecMp_outready      <= 1'b0;
+          Enc_BpV_DecMp1_outready     <= 1'b0;
+          Enc_BpV_DecMp2_outready     <= 1'b0;
           EncPk_DecSk_PolyVec_RAd     <= 0;
           AtG_RAd                     <= 0;
           Enc_BpV_DecMp_WAd           <= 0; 
@@ -202,7 +225,7 @@ always @(posedge clk/* or negedge rst_n*/)
       // Enc
       //
       {Push_0,Pop_Enc_At0}: begin
-          Enc_BpV_DecMp_outready      <= 1'b0;
+          Enc_BpV_DecMp1_outready     <= 1'b0;
           AtG_RAd                     <= 0;
           get                         <= 0;
         end       
@@ -221,20 +244,22 @@ always @(posedge clk/* or negedge rst_n*/)
           P0_Poly_PAcc_enable         <= 1'b0;  
         end                                                                     
       {PAcc_1,Push_1}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
+          Enc_BpV_DecMp1_outready     <= 1'b1;
           Enc_BpV_DecMp_WAd           <= 32;                 
           Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[128-1 : 0];
-          // DEBUG:                   
+          // DEBUG:
+          // synthesis translate_off
           $display("PACC (OUT)[Bp0]: %h", {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]});
           Bp_debug[1023 -: 512] <= {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]};
+          // synthesis translate_on
         end
       {Push_1,Push_1}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
+          Enc_BpV_DecMp1_outready      <= 1'b1;
           Enc_BpV_DecMp_WAd           <= Enc_BpV_DecMp_WAd + 1;                 
           Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[(Enc_BpV_DecMp_WAd-32+2)*128 -1 -: 128];
         end
       {Push_1,Pop_Enc_At1}: begin
-          Enc_BpV_DecMp_outready      <= 1'b0;
+          Enc_BpV_DecMp1_outready      <= 1'b0;
           AtG_RAd                     <= 2;
           get                         <= 0;
         end              
@@ -252,15 +277,17 @@ always @(posedge clk/* or negedge rst_n*/)
           P0_Poly_PAcc_enable         <= 1'b0;  
         end
       {PAcc_2,Push_2}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
+          Enc_BpV_DecMp1_outready      <= 1'b1;
           Enc_BpV_DecMp_WAd           <= 64;                 
           Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[128-1 : 0];                   
           // DEBUG
+          // synthesis translate_off
           $display("PACC (OUT)[Bp1]: %h", {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]});
           Bp_debug[511 : 0] <= {P0_Poly_PAcc_oPoly[4095 -: 256], P0_Poly_PAcc_oPoly[255 : 0]};
+          // synthesis translate_on
         end
       {Push_2,Push_2}: begin
-          Enc_BpV_DecMp_outready      <= 1'b1;
+          Enc_BpV_DecMp1_outready      <= 1'b1;
           Enc_BpV_DecMp_WAd           <= Enc_BpV_DecMp_WAd + 1;                 
           Enc_BpV_DecMp1_WData        <= P0_Poly_PAcc_oPoly[(Enc_BpV_DecMp_WAd-64+2)*128 -1 -: 128];          
         end                                           
@@ -272,7 +299,7 @@ always @(posedge clk/* or negedge rst_n*/)
           NTT_Poly_0_RAd              <= 0;
           EncPk_DecSk_PolyVec_RAd     <= 0;
           AtG_RAd                     <= 0;
-          Enc_BpV_DecMp_outready      <= 1'b0;
+          Enc_BpV_DecMp1_outready      <= 1'b0;
           Enc_BpV_DecMp_WAd           <= 0; 
           Enc_BpV_DecMp1_WData        <= 0;
           get                         <= 0;
