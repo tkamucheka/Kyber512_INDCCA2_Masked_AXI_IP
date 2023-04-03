@@ -49,12 +49,12 @@ output reg  [onoise_BRAM_Length-1 : 0] eG_WData
 // output reg [255:0] eG_debug
 );
 
-reg  P0_Permutation_enable;
-reg  P0_permutation_only_noise;
-reg  [1 : 0] P0_permutation_elements_num; //i,j
-reg  [3 : 0] P0_permutation_nonce;
-wire P0_permutation_done;
-wire [At_CharArray_Size-1 : 0] P0_permutation_At_Char;
+reg                               P0_Permutation_enable;
+reg                               P0_permutation_only_noise;
+reg  [1 : 0]                      P0_permutation_elements_num; //i,j
+reg  [3 : 0]                      P0_permutation_nonce;
+wire                              P0_permutation_done;
+wire [At_CharArray_Size-1    : 0] P0_permutation_At_Char;
 wire [noise_CharArray_Size-1 : 0] P0_permutation_Noise_Char;
 
 reg  P1_Rej_Uniform_enable;

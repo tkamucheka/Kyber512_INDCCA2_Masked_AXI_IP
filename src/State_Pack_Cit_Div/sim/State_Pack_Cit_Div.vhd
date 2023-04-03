@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -135,7 +135,7 @@ ARCHITECTURE State_Pack_Cit_Div_arch OF State_Pack_Cit_Div IS
 BEGIN
   U0 : div_gen_v5_1_15
     GENERIC MAP (
-      C_XDEVICEFAMILY => "virtex7",
+      C_XDEVICEFAMILY => "artix7",
       C_HAS_ARESETN => 0,
       C_HAS_ACLKEN => 0,
       C_LATENCY => 18,

@@ -138,13 +138,15 @@ always @(posedge clk or negedge rst_n)
           P0_INTT_enable  <= 1'b1;
           get             <= 0;
           // DEBUG:
+          // synthesis translate_off
           // P0_INTT_iPoly  <= V_debug_in;
           $display("INTT (IN)[V]: %h", PACC_EncBp_DecMp_Poly_RData);
+          // synthesis translate_on
         end
       {INTT0,INTT0}: begin
           P0_INTT_enable              <= 1'b0;
-          // synthesis translate_off
           // DEBUG:
+          // synthesis translate_off
           select <= 4'd0;
           // synthesis translate_on
       end
@@ -158,8 +160,10 @@ always @(posedge clk or negedge rst_n)
             INTT_Enc_BpV_DecMp2_WData    <= P0_INTT_oPoly[128-1 : 0];
           end
           // DEBUG:
+          // synthesis translate_off
           $display("INTT (OUT)[V]: %h", P0_INTT_oPoly);
           // V_debug <= {P0_INTT_oPoly[4095 -: 256], P0_INTT_oPoly[255 : 0]};
+          // synthesis translate_on
         end
       {Push0,Push0}: begin
           INTT_Enc_BpV_DecMp_WAd      <= INTT_Enc_BpV_DecMp_WAd + 1;              
@@ -204,13 +208,17 @@ always @(posedge clk or negedge rst_n)
           P0_INTT_enable  <= 1'b1;
           get             <= 0;
           // DEBUG:
+          // synthesis translate_off
           // P0_INTT_iPoly  <= Bp0_debug_in;
           $display("INTT (IN)[Bp0]: %h", PACC_EncBp_DecMp_Poly_RData);
+          // synthesis translate_on
         end
       {INTT1,INTT1}: begin
           P0_INTT_enable              <= 1'b0;
           // DEBUG:
+          // synthesis translate_off
           select <= 4'd1;
+          // synthesis translate_on
       end
       {INTT1,Push1}: begin
           P0_INTT_enable              <= 1'b0;
@@ -218,8 +226,10 @@ always @(posedge clk or negedge rst_n)
           INTT_Enc_BpV_DecMp_WAd      <= 32;                 
           INTT_Enc_BpV_DecMp1_WData    <= P0_INTT_oPoly[128-1 : 0]; 
           // DEBUG:
+          // synthesis translate_off
           $display("INTT (OUT)[Bp0]: %h", P0_INTT_oPoly);
-          // Bp_debug[1023 -: 512] <= {P0_INTT_oPoly[4095 -: 256], P0_INTT_oPoly[255 : 0]}; 
+          // Bp_debug[1023 -: 512] <= {P0_INTT_oPoly[4095 -: 256], P0_INTT_oPoly[255 : 0]};
+          // synthesis translate_on
         end
       {Push1,Push1}: begin
           INTT_Enc_BpV_DecMp1_outready <= 1'b1;
@@ -239,13 +249,17 @@ always @(posedge clk or negedge rst_n)
           P0_INTT_enable  <= 1'b1;
           get             <= 0;
           // DEBUG:
+          // synthesis translate_off
           // P0_INTT_iPoly  <= Bp1_debug_in;
           $display("INTT (IN)[Bp1]: %h", PACC_EncBp_DecMp_Poly_RData);
+          // synthesis translate_on
         end
       {INTT2,INTT2}: begin
           P0_INTT_enable              <= 1'b0;
           // DEBUG:
+          // synthesis translate_off
           select <= 4'd2;
+          // synthesis translate_on
       end
       {INTT2,Push2}: begin
           P0_INTT_enable              <= 1'b0;
@@ -253,8 +267,10 @@ always @(posedge clk or negedge rst_n)
           INTT_Enc_BpV_DecMp_WAd      <= 64;                 
           INTT_Enc_BpV_DecMp1_WData    <= P0_INTT_oPoly[128-1 : 0];
           // DEBUG
+          // synthesis translate_off
           $display("INTT (OUT)[Bp1]: %h", P0_INTT_oPoly);
           // Bp_debug[511 : 0] <= {P0_INTT_oPoly[4095 -: 256], P0_INTT_oPoly[255 : 0]};
+          // synthesis translate_on
         end
       {Push2,Push2}: begin
           INTT_Enc_BpV_DecMp1_outready <= 1'b1;

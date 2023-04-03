@@ -43,7 +43,8 @@ wire [COEFF_SZ-1:0] PRNG_out;
 
 reg  [SEED_SZ-1:0] r_seed, r_seed_buf;
 
-// Driver
+// Mod 2^10: Keep random values smaller Q
+// r -> Q/2 and r -> Q, produce erroneous message bits
 assign rand = (PRNG_out & 16'h07FF); // & QM;
 
 reg [K-1:0] state = 1;

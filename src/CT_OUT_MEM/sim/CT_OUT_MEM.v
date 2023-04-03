@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -81,8 +81,8 @@ input wire [7 : 0] addrb;
 output wire [31 : 0] doutb;
 
   blk_mem_gen_v8_4_3 #(
-    .C_FAMILY("virtex7"),
-    .C_XDEVICEFAMILY("virtex7"),
+    .C_FAMILY("artix7"),
+    .C_XDEVICEFAMILY("artix7"),
     .C_ELABORATION_DIR("./"),
     .C_INTERFACE_TYPE(0),
     .C_AXI_TYPE(1),
